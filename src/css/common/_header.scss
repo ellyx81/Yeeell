@@ -1,0 +1,21 @@
+@use 'tools/mixin' as mixin;
+@use 'tools/function' as function;
+@use 'settings/font-weight' as font-weight;
+
+.header {
+  @include mixin.center;
+  justify-content: flex-start;
+  padding: 30px;
+}
+
+.header__logo {
+  height: 80px;
+}
+
+.header__text {
+  font-size: 30px;
+  font-weight: font-weight.$black;
+  line-height: function.getem(30, 45);
+  letter-spacing: 4px;
+  margin-left: 40px;
+}
