@@ -6,7 +6,7 @@
 
 .hero {
   width: 100%;
-  height: 1080px;
+  height: function.getpc(1200px);
   position: relative;
 }
 
@@ -15,72 +15,77 @@
   height: 100%;
   background-image: url("../assets/Hero-image.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .hero__card {
   position: absolute;
   background-color: color.$white;
-  width: 550px;
-  bottom: 250px;
-  left: 200px;
-  border-radius: 10px;
+  width: function.getpc(550px);
+  bottom: function.getpc(250px);
+  left: function.getpc(200px);
+  border-radius: function.getpc(10px);
 }
 
 .hero__top-text {
   font-family: font-family.$playlist;
-  font-size: 60px;
+  font-size: function.getpc(60px);
   color: color.$pink;
   position: absolute;
-  margin: -35px 0 0 -50px;
+  margin: function.getpc(-35px) 0 0 function.getpc(-50px);
   transform: rotate(-20deg);
 }
 
 .hero__details-container {
   position: relative;
-  padding: 60px 50px;
+  padding: function.getpc(60px) function.getpc(50px);
   width: 100%;
-  height: 450px;
-  z-index: 2;
+  height: function.getpc(450px);
+  z-index: 1;
 }
 
 .hero__title-decoration {
   position: absolute;
-  width: 350px;
-  z-index: 0;
-  top: 130px;
-  left: 45px;
+  width: function.getpc(350px);
+  height: function.getpc(40px);
+  top: function.getpc(130px);
+  left: function.getpc(45px);
+  background-image: url("../assets/decoration2.svg");
+  background-repeat: no-repeat;
 }
 
 .hero__subtitle {
-  font-size: 24px;
+  font-size: function.getpc(24px);
   font-weight: font-weight.$bold;
 }
 
 .hero__title {
-  font-size: 45px;
+  font-size: function.getpc(45px);
   font-weight: font-weight.$bold;
 }
 
 .hero__description {
-  width: 450px;
-  font-size: 28px;
+  width: function.getpc(450px);
+  font-size: function.getpc(28px);
   font-weight: font-weight.$regular;
-  letter-spacing: 1.5px;
+  letter-spacing: function.getpc(1.5px);
   line-height: function.getem(28, 49);
   text-align: justify;
-  margin: 40px 0;
+  margin: function.getpc(40px) 0;
 }
 
 .hero__subs-container {
-  height: 150px;
+  height: function.getpc(150px);
   background-color: color.$gold;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 function.getpc(10px) function.getpc(10px);
   @include mixin.center;
 }
 
 .hero__subs-decoration {
-  height: 120px;
+  height: function.getpc(120px);
+  width: function.getpc(60px);
+  background-image: url("../assets/decoration1.svg");
+  background-repeat: no-repeat;
 
   &--right {
     transform: rotateY(180deg);
@@ -90,63 +95,64 @@
 .hero__subs-wrapper {
   @include mixin.center;
   flex-direction: column;
-  gap: 8px;
+  gap: function.getpc(8px);
   color: color.$white;
   font-weight: font-weight.$bold;
 }
 
 .hero__subs-text {
-  font-size: 24px;
+  font-size: function.getpc(24px);
 }
 
 .hero__subs-number {
-  font-size: 60px;
+  font-size: function.getpc(60px);
   font-family: font-family.$poppins;
   line-height: 1em;
 } 
 
 .hero__subs-unit {
-  font-size: 30px;
+  font-size: function.getpc(30px);
 }
 
 .hero__widget {
   position: fixed;
-  bottom: 50px;
-  right: 48px;
+  bottom: function.getpc(50px);
+  right: function.getpc(48px);
 
   &-dialogue {
     background-image: url("../assets/dialogue-blue.svg");
-    width: 240px;
-    height: 100px;
+    width: function.getpc(240px);
+    height: function.getpc(100px);
     background-repeat: no-repeat;
     
     &-text {
-      font-size: 26.67px;
+      font-size: function.getpc(26.67px);
       line-height: 1em;
       color: color.$white;
       font-weight: font-weight.$bold;
-      padding-top: 18px;
+      padding-top: function.getpc(18px);
       width: 100%;
       text-align: center;
     }
   }
 
   &-seal {
-    background-image: url("../assets/seal.svg");
-    width: 240px;
-    height: 240px;
-    background-repeat: no-repeat;
     @include mixin.center;
     flex-direction: column;
-    gap: 20px;
+    gap: function.getpc(20px);
+    background-image: url("../assets/seal.svg");
+    width: function.getpc(240px);
+    height: function.getpc(240px);
+    background-repeat: no-repeat;
+    cursor: pointer;
   }
 
   &-icon {
-    width: 80px;
+    width: function.getpc(80px);
   }
 
   &-text {
-    font-size: 22px;
+    font-size: function.getpc(22px);
     color: color.$white;
     font-weight: font-weight.$bold;
   }

@@ -5,21 +5,21 @@
 .header {
   @include mixin.center;
   justify-content: flex-start;
-  padding: 32px;
+  padding: function.getpc(32px);
   position: fixed;
   z-index: 3;
 }
 
 .header__logo {
-  height: 80px;
+  height: function.getpc(80px);
   cursor: pointer;
 }
 
 .header__text {
-  font-size: 30px;
+  font-size: function.getpc(30px);
   font-weight: font-weight.$black;
   line-height: function.getem(30, 45);
-  letter-spacing: 4px;
-  margin-left: 40px;
-  margin-top: 2px;
+  letter-spacing: function.getpc(4px);
+  margin-left: function.getpc(40px);
+  margin-top: function.getpc(2px);
 }

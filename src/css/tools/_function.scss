@@ -11,3 +11,8 @@
 @function getem($base-size, $illust-lheight) {
   @return calc($illust-lheight / $base-size) * 1em;
 }
+
+@function getpc($val) {
+  $result: calc(1366/1920) * $val;
+  @return $result;
+}
