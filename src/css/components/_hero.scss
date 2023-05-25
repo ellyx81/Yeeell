@@ -6,25 +6,26 @@
 
 .hero {
   width: 100%;
-  height: function.getpc(1200px);
+  height: 100vh;
+  max-height: 1080px;
   position: relative;
 }
 
 .hero__image {
   width: 100%;
   height: 100%;
-  background-image: url("../assets/Hero-image.png");
+  background-image: url("../img/index-page/hero/Hero-image.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .hero__card {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  background-color: color.$white;
   width: function.getpc(550px);
-  bottom: function.getpc(250px);
+  top: function.getpc(260px);
   left: function.getpc(200px);
-  border-radius: function.getpc(10px);
 }
 
 .hero__top-text {
@@ -34,24 +35,15 @@
   position: absolute;
   margin: function.getpc(-35px) 0 0 function.getpc(-50px);
   transform: rotate(-20deg);
-}
-
-.hero__details-container {
-  position: relative;
-  padding: function.getpc(60px) function.getpc(50px);
-  width: 100%;
-  height: function.getpc(450px);
   z-index: 1;
 }
 
-.hero__title-decoration {
-  position: absolute;
-  width: function.getpc(350px);
-  height: function.getpc(40px);
-  top: function.getpc(130px);
-  left: function.getpc(45px);
-  background-image: url("../assets/decoration2.svg");
-  background-repeat: no-repeat;
+.hero__details-container {
+  background-color: color.$white;
+  padding: function.getpc(60px) function.getpc(50px);
+  width: 100%;
+  height: function.getpc(450px);
+  border-radius: function.getpc(10px) function.getpc(10px) 0 0;
 }
 
 .hero__subtitle {
@@ -60,18 +52,29 @@
 }
 
 .hero__title {
+  position: relative;
+  z-index: 1;
   font-size: function.getpc(45px);
   font-weight: font-weight.$bold;
+}
+
+.hero__title-decoration {
+  position: relative;
+  width: function.getpc(340px);
+  height: function.getpc(40px);
+  top: function.getpc(-23px);
+  left: function.getpc(-5px);
+  background-image: url("../img/index-page/hero/title-decoration.svg");
+  background-repeat: no-repeat;
 }
 
 .hero__description {
   width: function.getpc(450px);
   font-size: function.getpc(28px);
   font-weight: font-weight.$regular;
-  letter-spacing: function.getpc(1.5px);
   line-height: function.getem(28, 49);
   text-align: justify;
-  margin: function.getpc(40px) 0;
+  margin-bottom: function.getpc(40px) 0;
 }
 
 .hero__subs-container {
@@ -84,7 +87,7 @@
 .hero__subs-decoration {
   height: function.getpc(120px);
   width: function.getpc(60px);
-  background-image: url("../assets/decoration1.svg");
+  background-image: url("../img/index-page/hero/title-decoration2.svg");
   background-repeat: no-repeat;
 
   &--right {
@@ -107,6 +110,7 @@
 .hero__subs-number {
   font-size: function.getpc(60px);
   font-family: font-family.$poppins;
+  font-weight: font-weight.$bold;
   line-height: 1em;
 } 
 
@@ -120,7 +124,7 @@
   right: function.getpc(48px);
 
   &-dialogue {
-    background-image: url("../assets/dialogue-blue.svg");
+    background-image: url("../img/index-page/hero/dialogue-blue.svg");
     width: function.getpc(240px);
     height: function.getpc(100px);
     background-repeat: no-repeat;
@@ -140,14 +144,19 @@
     @include mixin.center;
     flex-direction: column;
     gap: function.getpc(20px);
-    background-image: url("../assets/seal.svg");
+    background-image: url("../img/index-page/hero/seal.svg");
     width: function.getpc(240px);
     height: function.getpc(240px);
     background-repeat: no-repeat;
-    cursor: pointer;
+
+    &,
+    & * {
+      cursor: pointer;
+    }
   }
 
   &-icon {
+    height: auto;
     width: function.getpc(80px);
   }
 
