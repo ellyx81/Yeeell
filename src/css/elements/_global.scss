@@ -14,3 +14,10 @@ html {
     min-width: 100%;
   }
 }
+body {
+  max-width: 1920px;
+  margin: auto;
+}
+main {
+  background-color: color.$white;
+}

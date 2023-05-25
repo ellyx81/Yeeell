@@ -5,11 +5,14 @@
 .header {
   @include mixin.center;
   justify-content: flex-start;
-  padding: 30px;
+  padding: 32px;
+  position: fixed;
+  z-index: 3;
 }
 
 .header__logo {
   height: 80px;
+  cursor: pointer;
 }
 
 .header__text {
