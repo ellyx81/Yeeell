@@ -1,0 +1,61 @@
+@use 'settings/color' as color;
+@use 'settings/font-weight' as font-weight;
+@use 'settings/font-family' as font-family;
+@use 'tools/function' as function;
+@use 'tools/mixin' as mixin;
+
+.video {
+  height: function.getpc(1173px);
+  background-color: color.$light-purple;
+}
+
+.video__container {
+  background-image: url("../img/index-page/video/video-section-background.png");
+}
+
+.video__items {
+  @include mixin.center;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.video__box {
+  background-image: url("../img/index-page/video/video-decoration.svg");
+  background-repeat: no-repeat;
+  width: function.getpc(620px);
+  height: function.getpc(527px);
+  padding: 50px 50px 110px 20px;
+  position: relative;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:nth-child(2) {
+    margin-top: 70px;
+  }
+}
+
+
+
+
+.video__views-text {
+  @include mixin.center;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: font-weight.$bold;
+  font-size: function.getpc(30px);
+  color: color.$black;
+}
+
+.video__views-amount {
+  font-family: font-family.$poppins;
+  font-weight: font-weight.$bold;
+  color: color.$green;
+  font-size: function.getpc(60px);
+  line-height: 1em;
+  margin: 0 10px;
+}

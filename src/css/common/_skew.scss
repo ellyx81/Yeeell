@@ -1,0 +1,34 @@
+@use 'settings/color' as color;
+@use 'tools/function' as function;
+@use 'tools/mixin' as mixin;
+
+.skew {
+  position: relative;
+  top: -80px;
+  transform: skewY(6deg);
+  overflow: hidden;
+  @media screen and (min-width: 1700px) {
+    top: -145px;
+  }
+    
+  &::before { //set white border
+    top: 0;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: function.getpc(100px);
+    background-color: color.$white;
+    z-index: 1;
+  }
+}
+
+.skew__container {
+  transform: skewY(-6deg); //remove skew inside the container
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  @include mixin.center;
+  flex-direction: column;
+}

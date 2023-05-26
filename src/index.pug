@@ -1,4 +1,5 @@
 extends includes/layout.pug
+include includes/mixin.pug
 block content
   main.main
     section.main__section.hero
@@ -23,5 +24,11 @@ block content
         a(href="#").hero__widget-seal
           img(src="img/icons/plane-icon.svg", alt="").hero__widget-icon
           p.hero__widget-text お問い合わせ
+    section.main__section.video.skew
+      .video__container.skew__container
+        img(src="img/index-page/video/video-title.svg", alt="").title
+        .video__items
+          +video("img/index-page/video/movie-1.jpg", "74,563")
+          +video("img/index-page/video/movie-2.jpg", "42,825")
 block script
   script(src="js/top/index.ts")

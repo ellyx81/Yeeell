@@ -1,0 +1,6 @@
+@use 'tools/function' as function;
+
+.title {
+  height: function.getpc(50px);
+  width: auto;
+}

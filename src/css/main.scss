@@ -2,4 +2,8 @@
 @use 'elements/global';
 @use 'trumps/helper';
 @use 'common/header';
-@use 'components/hero'
+@use 'common/skew';
+@use 'common/title';
+@use 'common/video-player';
+@use 'components/hero';
+@use 'components/video';
