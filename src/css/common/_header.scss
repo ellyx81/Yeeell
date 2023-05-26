@@ -19,7 +19,7 @@
   font-size: function.getpc(30px);
   font-weight: font-weight.$black;
   line-height: function.getem(30, 45);
-  letter-spacing: function.getpc(0.045em);
+  letter-spacing: 0.045em;
   margin-left: function.getpc(40px);
   margin-top: function.getpc(2px);
 }
