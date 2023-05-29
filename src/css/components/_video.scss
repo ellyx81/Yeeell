@@ -10,7 +10,24 @@
 }
 
 .video__container {
-  background-image: url("../img/index-page/video/video-section-background.png");
+  width: 100%;
+  height: 80%;
+  @include mixin.center;
+  flex-direction: column;
+  position: relative;
+
+  &::before { //sets the background image
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    max-width: 1597px;
+    height: 100%;
+    background-image: url("../img/index-page/video/video-section-background.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 30% 50%;
+  }
 }
 
 .video__items {
@@ -18,7 +35,7 @@
   align-items: flex-start;
   gap: 30px;
   width: 100%;
-  padding-top: 50px;
+  padding-top: 55px;
 }
 
 .video__box {
@@ -38,9 +55,6 @@
     margin-top: 70px;
   }
 }
-
-
-
 
 .video__views-text {
   @include mixin.center;

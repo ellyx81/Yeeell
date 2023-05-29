@@ -7,6 +7,7 @@
   top: -80px;
   transform: skewY(6deg);
   overflow: hidden;
+  @include mixin.center;
   @media screen and (min-width: 1700px) {
     top: -145px;
   }
@@ -24,11 +25,4 @@
 
 .skew__container {
   transform: skewY(-6deg); //remove skew inside the container
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-  @include mixin.center;
-  flex-direction: column;
 }
