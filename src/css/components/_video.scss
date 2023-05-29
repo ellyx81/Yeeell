@@ -5,16 +5,17 @@
 @use 'tools/mixin' as mixin;
 
 .video {
-  height: function.getpc(1177px);
+  height: function.getpc(1072px);
   background-color: color.$pastel-purple;
 }
 
 .video__container {
   width: 100%;
-  height: 80%;
+  height: 83%;
   @include mixin.center;
   flex-direction: column;
   position: relative;
+  margin-top: 35px;
 
   &::before { //sets the background image
     content: "";
@@ -26,7 +27,7 @@
     background-image: url("../img/index-page/video/video-section-background.png");
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: 30% 50%;
+    background-position: 40% 50%;
   }
 }
 
