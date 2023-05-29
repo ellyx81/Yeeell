@@ -5,8 +5,8 @@
 @use 'tools/mixin' as mixin;
 
 .video {
-  height: function.getpc(1173px);
-  background-color: color.$light-purple;
+  height: function.getpc(1177px);
+  background-color: color.$pastel-purple;
 }
 
 .video__container {
@@ -62,7 +62,7 @@
   text-align: center;
   font-weight: font-weight.$bold;
   font-size: function.getpc(30px);
-  color: color.$black;
+  color: color.$text;
 }
 
 .video__views-amount {
