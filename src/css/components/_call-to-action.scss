@@ -35,14 +35,15 @@
 }
 
 .call-to-action__btn {
-  min-width: function.getpc(600px);
+  width: 100%;
+  max-width: function.getpc(600px);
   height: function.getpc(100px);
   background-color: color.$white;
   border-radius: function.getpc(50px);
   border: none;
   margin-top: 20px;
   @include mixin.center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 14px;
 
   &,
@@ -57,40 +58,31 @@
   &-text {
     font-size: function.getpc(30px);
     font-weight: font-weight.$bold;
+    letter-spacing: .04em;
     color: color.$secondary;
   }
 
   &-icon {
     width: function.getpc(60px);
     height: auto;
-    margin-left: -80px;
-  }
-
-  &-text,
-  &-icon {
-  }
-
-  &::before {
-    content: "見積無料";
-    font-size: function.getpc(36px);
-    font-weight: font-weight.$bold;
-    color: color.$white;
-    background-image: url('../img/index-page/cta/dialogue-bubble.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    width: function.getpc(255px);
-    height: function.getpc(129px);
-    @include mixin.center;
-    position: relative; 
-    left: -200px; 
-    top: -45px; 
+    margin-left: -200px;
   }
 }
 
-// .call-to-action__dialogue {
+.call-to-action__dialogue {
+  background-image: url('../img/index-page/cta/dialogue-bubble.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: function.getpc(255px);
+  height: function.getpc(129px);
+  @include mixin.center;
+  position: relative; 
+  left: -300px; 
+  top: -35px; 
 
-//   &-text {
-//     font-size: function.getpc(36px);
-//     color: color.$white;
-//   }
-// }
+  &-text {
+    font-size: function.getpc(36px);
+    font-weight: font-weight.$bold;
+    color: color.$white;
+  }
+}
