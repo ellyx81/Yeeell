@@ -10,12 +10,12 @@
 
 .features__container {
 	width: 100%;
-	height: 88%;
+	height: 100%;
 	@include mixin.center;
 	flex-direction: column;
 	gap: 30px;
 	position: relative;
-  margin-top: 50px;
+  margin-top: -20px;
 
 	&::before { //sets the background image
     content: "";
@@ -23,7 +23,7 @@
     z-index: -1;
     width: 100%;
     max-width: 1597px;
-    height: 100%;
+    height: 95%;
 		background-image: url("../img/index-page/features/features-background-image.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -34,7 +34,7 @@
 .features__top-section {
   @include mixin.center;
   flex-direction: column;
-  gap: 38px;
+  gap: 35px;
 }
 
 .features__title {
