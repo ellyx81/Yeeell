@@ -56,16 +56,17 @@ block content
             +features("img/icons/comb-icon.svg", "ヘアケア")
             +features("img/icons/plane-ticket-icon.svg", "旅行")
             +features("img/icons/television-icon.svg", "アニメ")
-    section.main-section.call-to-action.skew
+    section.main__section.call-to-action.skew
       .call-to-action__container.skew__remove-skew
         .call-to-action__headline Contact us
         p.call-to-action__text 広告出稿がはじめてのお客様にも #[br]
             | わかりやすくご説明いたします
-        button.call-to-action__btn
+        .call-to-action__bottom-container
           .call-to-action__dialogue 
             span.call-to-action__dialogue-text 見積無料
-          img(src="img/icons/plane-icon-pink.svg", alt="").call-to-action__btn-icon 
-          span.call-to-action__btn-text 相談してみる
+          button.call-to-action__btn
+            img(src="img/icons/plane-icon-pink.svg", alt="").call-to-action__btn-icon 
+            span.call-to-action__btn-text 相談してみる
 
 block script
   script(src="js/top/index.ts")
