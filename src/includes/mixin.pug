@@ -7,3 +7,12 @@ mixin video(thumbnail, views)
       | １か月間で 
       span.video__views-amount= views
       |  回再生！
+
+mixin dialogue(modifier, text)
+  .features__dialogue-bubble(class= modifier)
+    p.features__dialogue-bubble-text!= text
+
+mixin features(icon, text)
+  .features__offer-circle
+    img(src= icon, alt="").features__offer-icon
+    span.features__offer-text= text

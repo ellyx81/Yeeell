@@ -25,10 +25,36 @@ block content
           img(src="img/icons/plane-icon.svg", alt="").hero__widget-icon
           p.hero__widget-text お問い合わせ
     section.main__section.video.skew
-      .video__container.skew__container
+      .video__container.skew__remove-skew
         img(src="img/index-page/video/video-title.svg", alt="").title
         .video__items
           +video("img/index-page/video/movie-1.jpg", "74,563")
           +video("img/index-page/video/movie-2.jpg", "42,825")
+    section.main__section.features.skew
+      .features__container.skew__remove-skew
+        .features__top-section
+          h2.features__title 
+            | こんな
+            span.features__title-highlight お悩み 
+            | をお持ちの企業様にオススメ
+          .features__dialogue-container
+            +dialogue("", "新商品やサービスを <br> いち早く広めたい ！")
+            +dialogue("features__dialogue-bubble--second ", "適切なインフルエンサーの <br> 探し方がわからない ！")
+            +dialogue("features__dialogue-bubble--third ", "女性に <br> 特化した <br> PR がしたい !")
+            +dialogue("features__dialogue-bubble--fourth ", "ユーザーの <br> 反応を <br> 確かめたい ！")
+        .features__bottom-section
+          h2.features__title 
+            | こんな
+            span.features__title-highlight.features__title-highlight--blue アイテム 
+            | を紹介することが得意です ！
+          .features__offer-container
+            +features("img/icons/makeup-icon.svg", "コスメ")
+            +features("img/icons/skin-products-icon.svg", "スキンケア")
+            +features("img/icons/dress-icon.svg", "洋服")
+            +features("img/icons/hair-blower-icon.svg", "生活雑貨")
+            +features("img/icons/drinks-icon.svg", "食品")
+            +features("img/icons/comb-icon.svg", "ヘアケア")
+            +features("img/icons/plane-ticket-icon.svg", "旅行")
+            +features("img/icons/television-icon.svg", "アニメ")
 block script
   script(src="js/top/index.ts")
