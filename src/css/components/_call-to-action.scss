@@ -7,6 +7,7 @@
 .call-to-action {
   height: function.getpc(540px);
   background-color: color.$secondary;
+  margin-top: function.getpc(100px);
 }
 
 .call-to-action__container {
