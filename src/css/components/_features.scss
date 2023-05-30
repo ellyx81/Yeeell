@@ -4,7 +4,7 @@
 @use 'tools/mixin' as mixin;
 
 .features {
- 	height: function.getpc(1750px);
+ 	height: function.getpc(1642px);
   background-color: color.$pastel-blue;
 }
 
@@ -13,9 +13,9 @@
 	height: 88%;
 	@include mixin.center;
 	flex-direction: column;
-	gap: 33px;
+	gap: 30px;
 	position: relative;
-  margin-top: 28px;
+  margin-top: 50px;
 
 	&::before { //sets the background image
     content: "";
