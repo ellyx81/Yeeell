@@ -1,0 +1,128 @@
+@use 'settings/color' as color;
+@use 'settings/font-weight' as font-weight;
+@use 'settings/font-family' as font-family;
+@use 'tools/function' as function;
+@use 'tools/mixin' as mixin;
+
+.pr-points {
+ 	height: function.getpc(2376px);
+  background-color: color.$white;
+  margin-top: -20px;
+}
+
+.pr-points__container {
+	width: 100%;
+	height: 100%;
+	@include mixin.center;
+	flex-direction: column;
+	position: relative;
+  
+	&::before { //sets the background image
+    content: "";
+    position: absolute;
+    top: -60px;
+    z-index: -1;
+    width: 100%;
+    max-width: 1597px;
+    height: 104%;
+		background-image: url("../img/index-page/pr-points/pr-points-section-background.png");
+    background-size: contain;
+    background-repeat: repeat-y;
+    background-position: center;
+  }
+}
+
+.pr-points__title {
+  margin-top: 30px;
+  @include mixin.center;
+  gap: 15px;
+
+  &-decoration {
+    background: url("../img/index-page/pr-points/title-decoration.svg");
+    background-repeat: no-repeat;
+    width: function.getpc(60px);
+    height: function.getpc(80px);
+
+    &--right {
+     transform: scaleX(-1);
+    }
+  }
+
+  &-text {
+    font-size: function.getpc(40px);
+    font-weight: font-weight.$bold;
+    letter-spacing: .04em;
+    color: color.$text;
+    @include mixin.center;
+    gap: 8px;
+  }
+
+  &-highlight {
+    width: function.getpc(127px);
+    height: function.getpc(80px);
+  }
+}
+
+.pr-points__section-container {
+  @include mixin.center;
+  flex-direction: column;
+  gap: 100px;
+  padding: 80px 0;
+}
+
+.pr-points__section {
+  @include mixin.center;
+  gap: 40px;
+  
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.pr-points__image {
+  width: function.getpc(960px);
+  height: function.getpc(540px);
+  border-radius: 5px;
+}
+
+.pr-points__text-container {
+  height: 100%;
+  max-width: function.getpc(600px);
+  min-width: function.getpc(500px);
+  @include mixin.center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 0 60px;
+}
+
+.pr-points__heading-container {
+  @include mixin.center;
+  gap: 15px;
+}
+
+.pr-points__bullet {
+  background-image: url("../img/index-page/pr-points/bullet1.svg");
+  width: function.getpc(80px);
+  height: function.getpc(80px);
+
+  &--second {
+    background-image: url("../img/index-page/pr-points/bullet2.svg");
+  }
+
+  &--third {
+    background-image: url("../img/index-page/pr-points/bullet3.svg");
+  }
+}
+
+.pr-points__heading {
+  font-size: function.getpc(30px);
+  font-weight: font-weight.$bold;
+}
+
+.pr-points__paragraph {
+  width: 100%;
+  font-size: function.getpc(28px);
+  line-height: function.getem(28, 49);
+  letter-spacing: .1em;
+}

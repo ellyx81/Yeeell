@@ -16,3 +16,12 @@ mixin features(icon, text)
   .features__offer-circle
     img(src= icon, alt="").features__offer-icon
     span.features__offer-text= text
+
+mixin pr-points(sectionModifier, bulletModifier, image, heading, paragraph)
+  .pr-points__section(class= sectionModifier)
+    img(src= image, alt="").pr-points__image
+    .pr-points__text-container
+      .pr-points__heading-container
+        .pr-points__bullet(class= bulletModifier)
+        h2.pr-points__heading= heading
+      p.pr-points__paragraph!= paragraph

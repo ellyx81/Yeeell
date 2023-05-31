@@ -58,7 +58,7 @@ block content
             +features("img/icons/television-icon.svg", "アニメ")
     section.main__section.call-to-action.skew
       .call-to-action__container.skew__remove-skew
-        .call-to-action__headline Contact us
+        h2.call-to-action__headline Contact us
         p.call-to-action__text 広告出稿がはじめてのお客様にも #[br]
             | わかりやすくご説明いたします
         .call-to-action__bottom-container
@@ -67,6 +67,19 @@ block content
           button.call-to-action__btn
             img(src="img/icons/plane-icon-pink.svg", alt="").call-to-action__btn-icon 
             span.call-to-action__btn-text 相談してみる
+    section.main__section.pr-points.skew  
+      .pr-points__container.skew__remove-skew
+        .pr-points__title
+          .pr-points__title-decoration
+          h2.pr-points__title-text ちゅるちゃんねるの
+            img(src="img/index-page/pr-points/title-highlight.svg", alt="").pr-points__title-highlight
+            | ポイント
+          .pr-points__title-decoration.pr-points__title-decoration--right
+        .pr-points__section-container
+          +pr-points("", "", "img/index-page/pr-points/image1.png", "独自のメイク法", "人中短縮や中顔面が短く見えるハイライトの入れ方など独自のメイク法を編み出し高クオリティなメイク法を発信。<br> ちょっとした工夫で整形無しでも変われる ”自然” なメイク方法を教えてくれると好評をいただいております ！")
+          +pr-points("pr-points__section--reverse", "pr-points__bullet--second", "img/index-page/pr-points/image2.png", "視聴者に寄り添った企画", "視聴者への寄り添い度は抜群 ！ ！<br> 元々二重まぶたですが、 奥二重に悩んでいる視聴者も多いということで、 アイテープを使用して奥二重にしたメイクを実施。<br> どこまでも視聴者に寄り添うスタイルが 「ここまでやってくれる人はいない」 と大変好評です。")
+          +pr-points("", "pr-points__bullet--third", "img/index-page/pr-points/image3.png", "30代からの支持も", "30代に見えない30歳。<br> 以前は20代からの支持を多く集めていましたが、 30代に入ったことで30代以降からの検索流入が増えています。<br> 30代あざとい系女子の冬メイクは1ヶ月で約30万回再生を獲得しております。")
+
 
 block script
   script(src="js/top/index.ts")
