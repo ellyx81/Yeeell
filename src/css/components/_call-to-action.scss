@@ -22,6 +22,7 @@
 .call-to-action__headline {
 	font-family: font-family.$playlist;
 	font-size: function.getpc(44px);
+  font-weight: font-weight.$regular;
 	color: color.$primary;
 	transform: rotate(-10deg);
 }
