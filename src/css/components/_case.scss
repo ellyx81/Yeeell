@@ -1,0 +1,57 @@
+@use 'settings/color' as color;
+@use 'settings/font-weight' as font-weight;
+@use 'tools/function' as function;
+@use 'tools/mixin' as mixin;
+
+.case {
+  height: function.getpc(1175px);
+  background-color: color.$pastel-pink;
+}
+
+.case__container {
+	width: 100%;
+	height: 100%;
+	@include mixin.center;
+	flex-direction: column;
+	gap: 30px;
+	position: relative;
+  margin-top: -10px;
+
+	&::before { //sets the background image
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    max-width: 1597px;
+    height: 95%;
+		background-image: url("../img/index-page/case/case-section-background.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 57% 50%;
+  }
+}
+
+.case__outer-border {
+  width: 100%;
+  max-width: function.getpc(1280px);
+  height: function.getpc(800px);
+  background-color: color.$purple;
+  padding: function.getpc(30px) function.getpc(50px);
+  border-radius: function.getpc(15px);
+}
+
+.case__box {
+  width: 100%;
+  height: 100%;
+  background-color: color.$white;
+  border-radius: function.getpc(9px);
+  @include mixin.center;
+  flex-direction: column;
+}
+
+.case__title {
+  font-size: function.getpc(32px);
+  font-weight: font-weight.$bold;
+  letter-spacing: 0.04em;
+  color: color.$purple;
+}
