@@ -1,0 +1,32 @@
+@use 'settings/color' as color;
+@use 'settings/font-weight' as font-weight;
+@use 'tools/function' as function;
+@use 'tools/mixin' as mixin;
+
+.recommendation {
+  height: function.getpc(931px);
+  background-color: color.$primary;
+  margin-top: function.getpc(100px);
+}
+
+.recommendation__container {
+  width: 100%;
+  height: 100%;
+  @include mixin.center;
+  flex-direction: column;
+  position: relative;
+  margin-top: -20px;
+
+  &::before { //sets the background image
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    max-width: 1597px;
+    height: 95%;
+    background-image: url("../img/index-page/recommendation/recommendation-background-image.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+   background-position: center;
+  }
+}
