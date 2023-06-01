@@ -56,17 +56,7 @@ block content
             +features("img/icons/comb-icon.svg", "ヘアケア")
             +features("img/icons/plane-ticket-icon.svg", "旅行")
             +features("img/icons/television-icon.svg", "アニメ")
-    section.main__section.call-to-action.skew
-      .call-to-action__container.skew__remove-skew
-        h2.call-to-action__headline Contact us
-        p.call-to-action__text 広告出稿がはじめてのお客様にも #[br]
-            | わかりやすくご説明いたします
-        .call-to-action__bottom-container
-          .call-to-action__dialogue 
-            span.call-to-action__dialogue-text 見積無料
-          button.call-to-action__btn
-            img(src="img/icons/plane-icon-pink.svg", alt="").call-to-action__btn-icon 
-            span.call-to-action__btn-text 相談してみる
+    +call-to-action("Contact us", "広告出稿がはじめてのお客様にも <br> わかりやすくご説明いたします", "見積無料", "相談してみる")
     section.main__section.pr-points.skew  
       .pr-points__container.skew__remove-skew
         .pr-points__title
@@ -112,6 +102,7 @@ block content
           | その他ブランディングや売上拡大のための #[br]
           | 総合的なサポートも可能です。#[br] #[br]
           | まずはお気軽にご相談ください ！
+    +call-to-action("Contact us", "インフルエンサーマーケティングが <br> 初めての企業様でも安心です ！", "お気軽に <br> ご相談ください", "話を聞いてみる")
 
 block script
   script(src="js/top/index.ts")
