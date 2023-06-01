@@ -81,21 +81,26 @@ block content
           +pr-points("", "pr-points__bullet--third", "img/index-page/pr-points/image3.png", "30代からの支持も", "30代に見えない30歳。<br> 以前は20代からの支持を多く集めていましたが、 30代に入ったことで30代以降からの検索流入が増えています。<br> 30代あざとい系女子の冬メイクは1ヶ月で約30万回再生を獲得しております。")
     section.main__section.case.skew 
       .case__container.skew__remove-skew 
-        img(src="img/index-page/case/case-title.svg", alt="").title
+        img(src="img/index-page/case/case-title.svg", alt="").title.case__title
         .case__outer-border
           .case__box
-            .case__title 【豊胸】 整形巨乳の宿命
+            h2.case__heading 【豊胸】 整形巨乳の宿命
             .case__upper-container
               .case__left-section 
-                .case__video-title-container 
-                  .case__video-category 案件商品
-                  .case__video-title ナイトブラ
+                h3.case__video-details
+                  span.case__video-category 案件商品
+                  span.case__video-title ナイトブラ
                 .case__video
                   a(href="#").video-player
                     img(src= "img/index-page/case/movie-6.jpg", alt="").video-player__thumbnail
                     .video-player__icon
-              .case__paragraph 持ち前のトーク力で視聴者の悩みに寄り添った訴求を行いました。#[br]
+              p.case__paragraph 持ち前のトーク力で視聴者の悩みに寄り添った訴求を行いました。#[br]
                 | 大幅に売上へ直結したとクライアント様より大変高評価をいただきました ！
+            h3.case__views-text 
+              | 投稿から 1 か月で
+              span.case__views-amount 40,058
+              | 回再生 !
+            .case__box-decoration
 
 
 block script

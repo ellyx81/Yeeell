@@ -1,5 +1,6 @@
 @use 'settings/color' as color;
 @use 'settings/font-weight' as font-weight;
+@use 'settings/font-family' as font-family;
 @use 'tools/function' as function;
 @use 'tools/mixin' as mixin;
 
@@ -13,9 +14,9 @@
 	height: 100%;
 	@include mixin.center;
 	flex-direction: column;
-	gap: 30px;
+	gap: 40px;
 	position: relative;
-  margin-top: -10px;
+  margin-top: -20px;
 
 	&::before { //sets the background image
     content: "";
@@ -23,7 +24,7 @@
     z-index: -1;
     width: 100%;
     max-width: 1597px;
-    height: 95%;
+    height: 96%;
 		background-image: url("../img/index-page/case/case-section-background.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -40,6 +41,10 @@
   border-radius: function.getpc(15px);
 }
 
+.case__title {
+  margin-top: -10px;
+}
+
 .case__box {
   width: 100%;
   height: 100%;
@@ -47,11 +52,91 @@
   border-radius: function.getpc(9px);
   @include mixin.center;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
-.case__title {
+.case__heading {
   font-size: function.getpc(32px);
   font-weight: font-weight.$bold;
   letter-spacing: 0.04em;
   color: color.$purple;
+  margin: 38px auto 35px;
+}
+
+.case__upper-container {
+  @include mixin.center;
+  gap: 30px;
+}
+
+.case__left-section {
+  @include mixin.center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.case__video-details {
+  @include mixin.center;
+  justify-content: center;
+  padding-bottom: 10px;
+  gap: 10px;
+}
+
+.case__video-category {
+  font-size: function.getpc(16px);
+  font-weight: font-weight.$bold;
+  line-height: 1em;
+  color: color.$white;
+  background-color: color.$purple;
+  padding: 3px 7px;
+  border-radius: function.getpc(12px);
+}
+
+.case__video-title {
+  font-size: function.getpc(24px);
+  font-weight: font-weight.$bold;
+  color: color.$purple;
+  letter-spacing: .1em;
+}
+
+.case__video {
+  width: function.getpc(464px);
+  height: function.getpc(261px);
+}
+
+.case__paragraph {
+  font-size: function.getpc(28px);
+  line-height: function.getem(28, 49);
+  max-width: function.getpc(500px);
+}
+
+.case__views-text {
+  font-size: function.getpc(40px);
+  font-weight: font-weight.$bold;
+  color: color.$text;
+  letter-spacing: .04em;
+  @include mixin.center;
+  margin: 35px auto 23px;
+}
+
+.case__views-amount {
+  font-family: font-family.$poppins;
+  font-weight: font-weight.$bold;
+  font-size: function.getpc(80px);
+  color: color.$purple;
+  letter-spacing: 0;
+  line-height: 1em;
+  height: function.getpc(100px);
+  background-image: url("../img/index-page/case/case-text-decoration.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding-bottom: 30px;
+  margin: 0 10px;
+}
+
+.case__box-decoration {
+  width: function.getpc(380px);
+  height: function.getpc(60px);
+  background-image: url("../img/index-page/case/case-box-decoration.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
