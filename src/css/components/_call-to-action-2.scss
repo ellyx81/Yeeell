@@ -1,0 +1,11 @@
+@use 'tools/function' as function;
+
+.call-to-action__dialogue--larger {
+  width: function.getpc(297px);
+  height: function.getpc(150px);
+  margin-left: -30px;
+}
+
+.call-to-action__dialogue-text--smaller {
+  font-size: function.getpc(27px);
+}
