@@ -32,6 +32,18 @@ mixin call-to-action(headline, text, dialogue, btnText, dialogueSizeModifier, di
           img(src="img/icons/plane-icon-pink.svg", alt="").call-to-action__btn-icon 
           span.call-to-action__btn-text= btnText
 
+mixin call-to-action(headline, text, dialogue, btnText)
+  section.main__section.call-to-action.skew
+    .call-to-action__container.skew__remove-skew
+      h2.call-to-action__headline= headline
+      p.call-to-action__text!= text
+      .call-to-action__bottom-container
+        .call-to-action__dialogue 
+          span.call-to-action__dialogue-text!= dialogue
+        button.call-to-action__btn
+          img(src="img/icons/plane-icon-pink.svg", alt="").call-to-action__btn-icon 
+          span.call-to-action__btn-text= btnText
+
 mixin pr-points(sectionModifier, bulletModifier, image, heading, paragraph)
   .pr-points__section(class= sectionModifier)
     .pr-points__image-wrapper.wow.animate__animated.animate__fadeInLeft
