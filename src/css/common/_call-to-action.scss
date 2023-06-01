@@ -91,6 +91,7 @@
     font-size: function.getpc(36px);
     font-weight: font-weight.$bold;
     color: color.$white;
+    line-height: function.getem(27, 40.5);
     text-align: center;
   }
 }

@@ -17,14 +17,14 @@ mixin features(icon, text)
     img(src= icon, alt="").features__offer-icon
     span.features__offer-text= text
 
-mixin call-to-action(headline, text, dialogue, btnText)
+mixin call-to-action(headline, text, dialogue, btnText, dialogueSizeModifier, dialogueTextModifier)
   section.main__section.call-to-action.skew
     .call-to-action__container.skew__remove-skew
       h2.call-to-action__headline= headline
       p.call-to-action__text!= text
       .call-to-action__bottom-container
-        .call-to-action__dialogue 
-          span.call-to-action__dialogue-text!= dialogue
+        .call-to-action__dialogue(class= dialogueSizeModifier)
+          span.call-to-action__dialogue-text(class= dialogueTextModifier)!= dialogue
         button.call-to-action__btn
           img(src="img/icons/plane-icon-pink.svg", alt="").call-to-action__btn-icon 
           span.call-to-action__btn-text= btnText
