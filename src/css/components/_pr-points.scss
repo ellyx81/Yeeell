@@ -5,7 +5,7 @@
 @use 'tools/mixin' as mixin;
 
 .pr-points {
- 	height: function.getpc(2376px);
+ 	max-height: function.getpc(2376px);
   background-color: color.$white;
   margin-top: -20px;
 }
@@ -33,7 +33,7 @@
 }
 
 .pr-points__title {
-  margin-top: 30px;
+  margin-top: 80px;
   @include mixin.center;
   gap: 15px;
 
@@ -64,36 +64,56 @@
 }
 
 .pr-points__section-container {
+  width: 100%;
   @include mixin.center;
   flex-direction: column;
   gap: 100px;
-  padding: 80px 0;
+  padding: 80px 0 120px 0;
 }
 
 .pr-points__section {
   @include mixin.center;
-  gap: 40px;
+  width: 100%;
   
   &--reverse {
     flex-direction: row-reverse;
   }
 }
 
-.pr-points__image {
-  width: function.getpc(960px);
-  height: function.getpc(540px);
+.pr-points__image-wrapper{
+  position: relative;
+  width: 100%;
+  max-width: function.getpc(960px);
+  min-width: function.getpc(700px);
   border-radius: 5px;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    display: block;
+    padding-top: 56.25%;  
+  }
+}
+
+.pr-points__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  top: 0;
+  left: 0;
 }
 
 .pr-points__text-container {
   height: 100%;
+  width: 100%;
   max-width: function.getpc(600px);
   min-width: function.getpc(500px);
   @include mixin.center;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
-  margin: 0 60px;
+  margin: 0 7%;
 }
 
 .pr-points__heading-container {
