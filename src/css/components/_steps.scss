@@ -1,0 +1,17 @@
+@use 'settings/color' as color;
+@use 'settings/font-weight' as font-weight;
+@use 'tools/function' as function;
+@use 'tools/mixin' as mixin;
+
+.steps {
+  height: function.getpc(638px);
+  background-color: color.$pastel-purple;
+  margin-top: function.getpc(100px);
+}
+  
+.steps__container {
+	width: 100%;
+	height: 100%;
+	@include mixin.center;
+	flex-direction: column;
+}
