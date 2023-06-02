@@ -93,7 +93,24 @@ block content
     +call-to-action("Contact us", "インフルエンサーマーケティングが <br> 初めての企業様でも安心です ！", "お気軽に <br> ご相談ください", "話を聞いてみる", "call-to-action__dialogue--larger", "call-to-action__dialogue-text--smaller")
     section.main__section.recommendation.skew 
       .recommendation__container.skew__remove-skew 
-      
+        .recommendation__title
+          .recommendation__title-decoration
+          img(src="img/index-page/recommendation/recommendation-title.svg", alt="").title
+          .recommendation__title-decoration.recommendation__title-decoration--right
+        .recommendation__box
+          p.recommendation__top-text Recommended
+          a(href="#").video-player.recommendation__video
+            img(src= "img/index-page/recommendation/movie-7.jpg", alt="").video-player__thumbnail
+            .video-player__icon
+          .recommendation__right-section
+            .recommendation__top-container
+              .recommendation__user-icon
+              h3.recommendation__user-name クリエイター担当者
+            p.recommendation__paragraph 人中短縮や中顔面短縮メイクなどの整形級メイクはちゅるにおまかせください ！#[br] スキンケアオタクでもあるため、 ターゲット層へ最適なご提案をさせていただきます。 高身長を活かしたファッション動画などマルチに対応できますので、 様々なジャンルでお気軽にご相談ください。
+            .recommendation__bottom-container
+              .recommendation__like-icon
+              .recommendation__comment-icon
+              
 
 block script
   script(src="js/top/index.ts")
