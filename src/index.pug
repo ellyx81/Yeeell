@@ -112,7 +112,12 @@ block content
               .recommendation__comment-icon
     section.main__section.steps.skew
       .steps__container.skew__remove-skew
-        img(src="img/index-page/steps/steps-title.svg", alt="").title
+        img(src="img/index-page/steps/steps-title.svg", alt="").title.steps__title
+        .steps__items
+          +step("ヒアリング", "img/index-page/steps/step-1.svg")
+          +step("企画・キャスティング", "img/index-page/steps/step-2.svg")
+          +step("制作", "img/index-page/steps/step-3.svg")
+          +step("投稿・レポート", "img/index-page/steps/step-4.svg")
 
 block script
   script(src="js/top/index.ts")

@@ -14,4 +14,61 @@
 	height: 100%;
 	@include mixin.center;
 	flex-direction: column;
+  gap: 40px;
+}
+
+.steps__title {
+  margin-top: -50px;
+}
+
+.steps__items {
+	width: 100%;
+	@include mixin.center;
+  gap: 32px;
+}
+
+.steps__box {
+  position: relative;
+  width: function.getpc(290px);
+  height: function.getpc(290px);
+  background-color: color.$white;
+  border-radius: function.getpc(10px);
+  border: 2px solid color.$green;
+  @include mixin.center;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &::before { //setting the right arrow
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: -16px;
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 16px solid color.$green;
+  }
+
+  &:last-child { //remove arrow on last step
+    &::before {
+      border: 0;
+    }
+  }
+}
+
+.steps__text {
+  font-size: function.getpc(24px);
+  color: color.$white;
+  background-color: color.$green;
+  @include mixin.center;
+  height: function.getpc(90px);
+  width: 100%;
+  border-radius: function.getpc(7px) function.getpc(7px) 0 0;
+}
+
+.steps__icon {
+  margin-top: 15px;
+  width: function.getpc(144px);
+  height: function.getpc(146px);
 }

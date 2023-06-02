@@ -56,3 +56,8 @@ mixin case(headingModifier, heading, category, title, thumbnail, paragraphModifi
       | 投稿から 1 か月で
       span.case__views-amount= views
       | 回再生 !
+
+mixin step(heading, image)
+  .steps__box
+    h3.steps__text= heading
+    img(src= image, alt="").steps__icon
