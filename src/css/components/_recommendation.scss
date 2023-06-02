@@ -85,7 +85,7 @@
   gap: 13px;
   height: 100%;
   width: 100%;
-  max-width: function.getpc(500px);
+  max-width: function.getpc(480px);
 }
 
 .recommendation__top-container {
@@ -115,7 +115,6 @@
   font-size: function.getpc(24px);
   color: color.$text;
   line-height: function.getem(24, 42);
-  letter-spacing: .1em;
 }
 
 .recommendation__bottom-container {
