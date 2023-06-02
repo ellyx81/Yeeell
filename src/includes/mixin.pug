@@ -38,3 +38,21 @@ mixin pr-points(sectionModifier, bulletModifier, image, heading, paragraph)
         .pr-points__bullet(class= bulletModifier)
         h2.pr-points__heading= heading
       p.pr-points__paragraph!= paragraph
+
+mixin case(headingModifier, heading, category, title, thumbnail, paragraphModifier, paragraph, views)
+  li.splide__slide.case__container
+    h2.case__heading(class= headingModifier)!= heading
+    .case__upper-container
+      .case__left-section 
+        h3.case__video-details
+          span.case__video-category= category
+          span.case__video-title= title
+        .case__video
+          a(href="#").video-player
+            img(src= thumbnail, alt="").video-player__thumbnail
+            .video-player__icon
+      p.case__paragraph(class= paragraphModifier)!= paragraph
+    h3.case__views-text 
+      | 投稿から 1 か月で
+      span.case__views-amount= views
+      | 回再生 !

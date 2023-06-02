@@ -1,0 +1,57 @@
+@use 'tools/function' as function;
+@use 'settings/color' as color;
+
+.splide__track {
+  width: 90%;
+}
+
+.splide__arrows {
+  width: 100%;
+  position: absolute;
+  bottom: 9%;
+}
+
+.splide__arrow {
+  opacity: 1 !important; 
+  width: function.getpc(60px) !important;
+  height: function.getpc(60px) !important;
+  
+  & * {
+    cursor: pointer;
+  }
+
+  &:hover {
+    border: 3px solid color.$white;
+  }
+
+  &--prev {
+    background-image: url("../img/index-page/case/slider-arrow-left.svg") !important;
+    left: 33% !important;
+  }
+
+  &--next {
+    background-image: url("../img/index-page/case/slider-arrow-right.svg") !important;
+    right: 33% !important;
+  }
+
+  svg {
+    fill: none !important;
+  }
+}
+
+.splide__pagination {
+  bottom: 7.5% !important;
+
+  &__page {
+    height: function.getpc(20px) !important;
+    width: function.getpc(20px) !important;
+    opacity: 1 !important;
+    background: color.$gray !important;
+    margin: 0 15px !important;
+
+    &.is-active {
+      background-image: url("../img/index-page/case/slider-pagination-active.svg") !important;
+      transform: scale(2) !important;
+    }
+  }
+}
