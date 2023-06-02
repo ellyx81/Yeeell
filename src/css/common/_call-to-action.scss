@@ -85,7 +85,13 @@
   @include mixin.center;
   position: relative; 
   left: -300px; 
-  top: -25px; 
+  top: -25px;
+  
+  &--larger {
+    width: function.getpc(297px);
+    height: function.getpc(150px);
+    margin-left: -30px;
+  }
 
   &-text {
     font-size: function.getpc(36px);
@@ -93,5 +99,9 @@
     color: color.$white;
     line-height: function.getem(27, 40.5);
     text-align: center;
+
+    &--smaller {
+      font-size: function.getpc(27px);
+    }
   }
 }
