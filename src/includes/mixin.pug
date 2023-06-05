@@ -65,11 +65,11 @@ mixin step(heading, image)
 mixin faq(questionNum, questionTitle, answer)
   li.faq__box.js-faq
     .faq__question
-      h2.faq__question-number= questionNum
+      span.faq__question-number= questionNum
       h3.faq__question-title= questionTitle
       .faq__question-btn
         .faq__question-horizontal-line
         .faq__question-vertical-line
     .faq__answer.js-answer
-      h2.faq__answer-label A
+      span.faq__answer-label A
       p.faq__answer-text!= answer
