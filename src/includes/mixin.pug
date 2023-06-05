@@ -61,3 +61,15 @@ mixin step(heading, image)
   .steps__box
     h3.steps__text= heading
     img(src= image, alt="").steps__icon
+
+mixin faq(questionNum, questionTitle, answer)
+  li.faq__box.js-faq
+    .faq__question
+      h2.faq__question-number= questionNum
+      h3.faq__question-title= questionTitle
+      .faq__question-btn
+        .faq__question-horizontal-line
+        .faq__question-vertical-line
+    .faq__answer.js-answer
+      h2.faq__answer-label A
+      p.faq__answer-text!= answer

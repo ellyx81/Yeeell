@@ -1,0 +1,118 @@
+@use 'settings/color' as color;
+@use 'settings/font-weight' as font-weight;
+@use 'settings/font-family' as font-family;
+@use 'tools/function' as function;
+@use 'tools/mixin' as mixin;
+
+.faq {
+  background-color: color.$pastel-blue;
+  margin-top: function.getpc(100px);
+  padding: 70px 0 100px;
+}
+  
+.faq__main-container,
+.faq__container {
+	width: 100%;
+	height: 100%;
+	@include mixin.center;
+	flex-direction: column;
+  gap: 35px;
+}
+
+.faq__container {
+  gap: 24px;
+}
+
+.faq__box{
+  background-color: color.$white;
+  width: 100%;
+  max-width: function.getpc(1000px);
+  border-radius: function.getpc(10px);
+  padding: 20px 18px;
+  @include mixin.center;
+  flex-direction: column;
+  cursor: pointer;
+
+  & * {
+    cursor: pointer;
+  }
+
+  &.is-active {
+    .faq__question .faq__question-btn .faq__question-vertical-line {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.faq__question {
+  @include mixin.center;
+  justify-content: flex-start;
+  width: 100%;
+
+  &-number {
+    font-family: font-family.$poppins;
+    font-weight: font-weight.$bold;
+    font-size: function.getpc(40px);
+    width: 65px;
+  }
+
+  &-title {
+    font-size: function.getpc(30px);
+    line-height: function.getem(30, 40);
+    width: 85%;
+  }
+
+  &-btn {
+    background-color: color.$primary;
+    border-radius: 50px;
+    width: function.getpc(50px);
+    height: function.getpc(50px);
+    position: relative;
+  }
+
+  &-horizontal-line,
+  &-vertical-line {
+    position: relative;
+    background-color: color.$text;
+    width: function.getpc(22px);
+    height: function.getpc(3px);
+    border-radius: 2px;
+    left: 29%;
+  }
+  
+  &-horizontal-line {
+    top: 46%;
+  }
+  
+  &-vertical-line {
+    top: 41%;
+    transition: all 0.3s ease-in-out;
+    transform: rotate(-90deg);
+  }
+}
+
+.faq__answer {
+  @include mixin.center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  max-height: 0;
+
+  &-label {
+    font-family: font-family.$poppins;
+    font-weight: font-weight.$bold;
+    font-size: function.getpc(40px);
+    width: 65px;
+    padding: 20px 0 0 10px;
+    color: color.$blue;
+  }
+  
+  &-text {
+    padding-top: 20px;
+    font-size: function.getpc(24px);
+    line-height: function.getem(24, 42);
+    width: 90%;
+  }
+}

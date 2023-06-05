@@ -118,6 +118,15 @@ block content
           +step("企画・キャスティング", "img/index-page/steps/step-2.svg")
           +step("制作", "img/index-page/steps/step-3.svg")
           +step("投稿・レポート", "img/index-page/steps/step-4.svg")
-
+    section.main__section.faq.skew
+      .faq__main-container.skew__remove-skew 
+        img(src="img/index-page/faq/faq-title.svg", alt="").title.faq__title
+        ul.faq__container.js-faqs
+          +faq("Q1", "料金はどのくらいかかりますか？", "クリエイターに応じて金額が異なります。<br> 弊社では10万円～販売しているクリエイターがおりますので、 予算にあわせたご提案が可能です。")
+          +faq("Q2", "インフルエンサーの年齢層は？", "20代のインフルエンサーが中心となりますが、 40代のインフルエンサーも所属しており、 幅広いターゲットへ訴求が可能です。")
+          +faq("Q3", "発注から実施までどれくらいかかりますか？", "1ヵ月を想定しております。<br> お客様のご状況に応じて調整することも可能でございます。")
+          +faq("Q4", "動画公開前に確認することは可能でしょうか？", "1回のみとなりますが、 動画を公開する前に事前にご確認を頂くことが可能です。")
+          +faq("Q5", "直接インフルエンサーと取引するのと何が違うのでしょうか？", "動画制作についてのディレクションなどは弊社にて対応するため、 お客様のご負担や工数を最小限におさえることができます。")
+          +faq("Q6", "とりあえず話だけ聞いてみたいのですが？", "ご相談頂くだけでも結構です。弊社からのご提案や実績などの話をお聞きになって、 ご検討頂けますと幸いです。")
 block script
   script(src="js/top/index.ts")
