@@ -1,0 +1,17 @@
+@use 'settings/color' as color;
+@use 'settings/font-weight' as font-weight;
+@use 'tools/function' as function;
+@use 'tools/mixin' as mixin;
+
+.footer {
+  height: function.getpc(310px);
+  background-color: color.$primary;
+  margin-top: function.getpc(100px);
+}
+
+.footer__container {
+	width: 100%;
+	height: 100%;
+	@include mixin.center;
+	flex-direction: column;
+}
