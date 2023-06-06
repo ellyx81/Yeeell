@@ -116,6 +116,10 @@
   left: function.getpc(-5px);
   background-image: url("../img/index-page/hero/title-decoration.svg");
   background-repeat: no-repeat;
+  @include media-query.sp {
+    top: function.getpc(-15px);
+    width: 140px;
+  }
 }
 
 .hero__description {
