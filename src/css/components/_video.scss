@@ -7,7 +7,6 @@
 .video {
   height: function.getpc(1072px);
   background-color: color.$pastel-purple;
-  margin-top: -100px;
     
   &::before { //set first white border
     top: 0;

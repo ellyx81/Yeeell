@@ -8,17 +8,6 @@
   background-color: color.$pastel-blue;
   margin-top: function.getpc(100px);
   padding: 70px 0 100px;
-  overflow: visible !important;
-
-  &::after { //set last white border
-    bottom: function.getpc(-95px);
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: function.getpc(100px);
-    background-color: color.$white;
-    z-index: 1;
-  }
 }
   
 .faq__main-container,
