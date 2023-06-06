@@ -54,6 +54,14 @@
   }
 }
 
+.footer__container {
+  width: 100%;
+  @include mixin.center;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
 .footer__logo {
   width: function.getpc(178px);
   height: function.getpc(40px);
