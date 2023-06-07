@@ -3,10 +3,14 @@
 @use 'settings/font-family' as font-family;
 @use 'tools/function' as function;
 @use 'tools/mixin' as mixin;
+@use 'tools/media-queries' as media-query;
 
 .video {
   height: function.getpc(1072px);
   background-color: color.$pastel-purple;
+  @include media-query.sp {
+    height: auto; 
+  }
     
   &::before { //set first white border
     top: 0;
@@ -16,6 +20,9 @@
     height: function.getpc(100px);
     background-color: color.$white;
     z-index: 1;
+    @include media-query.sp {
+      height: 30px;
+    }
   }
 }
 
@@ -26,6 +33,9 @@
   flex-direction: column;
   position: relative;
   margin-top: 100px;
+  @include media-query.sp{
+    margin: 80px 0;
+  }
 
   &::before { //sets the background image
     content: "";
@@ -38,6 +48,11 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 40% 50%;
+    @include media-query.sp{
+      background-size: 110vw; 
+      background-repeat: repeat-y;
+      background-position: top right;
+    }
   }
 }
 
@@ -45,35 +60,65 @@
   @include mixin.center;
   align-items: flex-start;
   gap: 30px;
+  margin-top: 55px;
   width: 100%;
-  padding-top: 55px;
+  @include media-query.sp{
+    flex-direction: column;
+    gap: 20px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+    width: 100%;
+  }
+}
+
+.video__wrapper {
+  position: relative;
+  width: 100%;
+  max-width: function.getpc(620px);
+  @include media-query.sp {
+    margin: auto;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    padding-top: function.getpercent(620, 527); 
+  }
+
+  &:nth-child(2) {
+    margin-top: 70px;
+    @include media-query.sp {
+      margin-top: 0;
+    }
+  }
 }
 
 .video__box {
   background-image: url("../img/index-page/video/video-decoration.svg");
   background-repeat: no-repeat;
-  width: function.getpc(620px);
-  height: function.getpc(527px);
-  padding: 50px 50px 110px 20px;
-  position: relative;
-  transition: transform 0.2s ease;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-
-  &:nth-child(2) {
-    margin-top: 70px;
+  padding: 12% 11% 12% 4%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  @include mixin.center;
+  flex-direction: column;
+  gap: 20px;
+  @include media-query.sp {
+    width: 100%;
   }
 }
 
 .video__views-text {
   @include mixin.center;
-  margin-top: 20px;
   text-align: center;
   font-weight: font-weight.$bold;
   font-size: function.getpc(30px);
   color: color.$text;
+  @include media-query.sp {
+    font-size: 14px;
+  }
 }
 
 .video__views-amount {
@@ -83,4 +128,7 @@
   font-size: function.getpc(60px);
   line-height: 1em;
   margin: 0 10px;
+  @include media-query.sp {
+    font-size: 30px;
+  }
 }
