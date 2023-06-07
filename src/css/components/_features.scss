@@ -2,11 +2,17 @@
 @use 'settings/font-weight' as font-weight;
 @use 'tools/function' as function;
 @use 'tools/mixin' as mixin;
+@use 'tools/media-queries' as media-query;
 
 .features {
  	height: function.getpc(1642px);
   background-color: color.$pastel-blue;
   margin-top: function.getpc(100px);
+  @include media-query.sp {
+    margin-top: 30px;
+    height: auto;
+    padding: 70px 0;
+  }
 }
 
 .features__container {
@@ -29,6 +35,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 58% 50%;
+    @include media-query.sp {
+      background-repeat: repeat-y;
+      background-position: top center;
+    }
   }
 }
 
@@ -42,8 +52,13 @@
   color: color.$text;
   font-size: function.getpc(40px);
   font-weight: font-weight.$bold;
+  text-align: center;
   line-height: function.getem(40, 40);
   letter-spacing: .04em;
+  max-width: 90vw;
+  @include media-query.sp {
+    font-size: 20px;
+  }
 
   &-highlight {
 		display: inline-block;
@@ -62,6 +77,10 @@
   width: function.getpc(1211px);
   height: function.getpc(545px);
   position: relative;
+  @include media-query.sp {
+    width: 90vw;
+    height: 530px;
+  }
 }
 
 .features__dialogue-bubble {
@@ -69,9 +88,15 @@
   top: 16px;
   background-image: url('../img/index-page/features/dialogue-bubble1.svg');
   background-repeat: no-repeat;
+  background-position: center;
   width: function.getpc(444px);
   height: function.getpc(399px);
   @include mixin.center;
+  @include media-query.sp{
+    width: 60vw;
+    height: 200px;
+    top: 140px;
+  }
 
   &-text {
     color: color.$pink;
@@ -80,6 +105,9 @@
     font-weight: font-weight.$bold;
     line-height: function.getem(33.6, 54);
     margin: -25px 0 0 -10px;
+    @include media-query.sp{
+      font-size: 16px;
+    }
   }
 
   &--second {
@@ -88,6 +116,12 @@
     left: 375px;
     width: function.getpc(487px);
     height: function.getpc(346px);
+    @include media-query.sp{
+      width: 70vw;
+      height: 200px;
+      left: auto;
+      right: -12px;
+    }
 
     .features__dialogue-bubble-text {
       margin: -5px 0 0 -15px;
@@ -102,6 +136,11 @@
     width: function.getpc(339px);
     height: function.getpc(338px);
     z-index: -1;
+    @include media-query.sp{
+      width: 50vw;
+      height: 190px;
+      left: 10%;
+    }
 
     .features__dialogue-bubble-text {
       margin: -20px 0 0 0;
@@ -115,6 +154,12 @@
     bottom: 18px;
     width: function.getpc(339px);
     height: function.getpc(334px);
+    @include media-query.sp{
+      width: 50vw;
+      height: 190px;
+      bottom: 105px;
+      right: 3%;
+    }
 
     .features__dialogue-bubble-text {
       margin: -10px 0 0 -20px;
@@ -131,6 +176,12 @@
   flex-direction: column;
   gap: 45px;
   padding: 50px;
+  @include media-query.sp {
+    width: 90vw;
+    height: auto;
+    padding: 20px;
+    gap: 30px;
+  }
 }
 
 .features__offer-container {
@@ -140,6 +191,10 @@
 	gap: 40px;
 	width: 100%;
 	height: 100%;
+  @include media-query.sp{
+    gap: 16px;
+    grid-template-columns: auto auto;
+  }
 }
 
 .features__offer-circle {
@@ -148,18 +203,32 @@
 	background-image: url('../img/index-page/features/features-circle.svg');
 	background-repeat: no-repeat;
 	background-position: center;
+  background-size: contain;
 	@include mixin.center;
 	flex-direction: column;
 	padding-top: 10px;
 	gap: 10px;
+  @include media-query.sp {
+    max-width: 180px;
+    max-height: 180px;
+    width: 30vw;
+    height: 30vw;
+  }
 }
 
 .features__offer-icon {
 	width: function.getpc(84px);
 	height: function.getpc(83px);
+  @include media-query.sp {
+    width: 40%;
+    height: 40%;
+  }
 }
 
 .features__offer-text {
 	font-weight: font-weight.$bold;
 	font-size: function.getpc(18px);
+  @include media-query.sp{
+    font-size: 12px;
+  }
 }
