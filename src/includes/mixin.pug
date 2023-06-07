@@ -1,12 +1,13 @@
 mixin video(thumbnail, views)
-  .video__box
-    a(href="#").video-player
-      img(src= thumbnail, alt="").video-player__thumbnail
-      .video-player__icon
-    p.video__views-text 
-      | １か月間で 
-      span.video__views-amount= views
-      |  回再生！
+  .video__wrapper
+    .video__box
+      a(href="#").video-player
+        img(src= thumbnail, alt="").video-player__thumbnail
+        .video-player__icon
+      p.video__views-text 
+        | １か月間で 
+        span.video__views-amount= views
+        |  回再生！
 
 mixin dialogue(modifier, text)
   .features__dialogue-bubble(class= modifier)
