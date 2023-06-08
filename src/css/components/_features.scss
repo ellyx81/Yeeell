@@ -55,7 +55,7 @@
   text-align: center;
   line-height: function.getem(40, 40);
   letter-spacing: .04em;
-  max-width: 90vw;
+  width: 90%;
   @include media-query.sp {
     font-size: 20px;
     line-height: 1.4em;
@@ -182,8 +182,7 @@
   gap: 45px;
   padding: 50px;
   @include media-query.sp {
-    width: 90vw;
-    max-width: 500px;
+    width: 90%;
     height: auto;
     padding: 20px;
     gap: 30px;

@@ -43,6 +43,7 @@
 
 .case__title {
   margin-top: -10px;
+  width: 90%;
 }
 
 .case__outer-border {
@@ -53,7 +54,7 @@
   padding: function.getpc(30px) function.getpc(50px);
   border-radius: function.getpc(15px);
   @include media-query.sp {
-    width: 90vw;
+    width: 90%;
     height: auto;
     padding: 6px 12px;
     border-radius: 5px;

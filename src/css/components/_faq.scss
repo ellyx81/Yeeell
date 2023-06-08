@@ -28,7 +28,7 @@
 .faq__container {
   gap: 24px;
   @include media-query.sp {
-    width: 90vw;
+    padding: 0 20px;
     max-width: 500px;
     gap: 18px;
   }

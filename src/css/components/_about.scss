@@ -46,6 +46,7 @@
   font-size: function.getpc(28px);
   line-height: function.getem(28, 49);
   text-align: center;
+  width: 90%;
   @include media-query.sp {
     font-size: 14px;
   }
