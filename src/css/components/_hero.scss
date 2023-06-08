@@ -11,7 +11,7 @@
   max-height: 1080px;
   position: relative;
   @include media-query.sp {
-    max-height: 100vh;
+    max-height: 100%;
   }
 }
 
@@ -43,9 +43,9 @@
     left: 50px;
   }
   @include media-query.sp {
-    width: 80vw;
+    width: 80%;
     max-width: 250px;
-    bottom: 12vh;
+    bottom: 12%;
     left: 20px;
   }
 }

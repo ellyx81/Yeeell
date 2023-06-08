@@ -83,7 +83,7 @@
   height: function.getpc(545px);
   position: relative;
   @include media-query.sp {
-    width: 90vw;
+    width: 90%;
     height: 530px;
   }
 }
@@ -98,7 +98,7 @@
   height: function.getpc(399px);
   @include mixin.center;
   @include media-query.sp{
-    width: 60vw;
+    width: 60%;
     height: 200px;
     top: 130px;
   }
@@ -122,7 +122,7 @@
     width: function.getpc(487px);
     height: function.getpc(346px);
     @include media-query.sp{
-      width: 70vw;
+      width: 70%;
       height: 200px;
       left: auto;
       right: -12px;
@@ -142,7 +142,7 @@
     height: function.getpc(338px);
     z-index: -1;
     @include media-query.sp{
-      width: 50vw;
+      width: 50%;
       height: 190px;
       left: 10%;
     }
@@ -160,7 +160,7 @@
     width: function.getpc(339px);
     height: function.getpc(334px);
     @include media-query.sp{
-      width: 50vw;
+      width: 50%;
       height: 190px;
       bottom: 105px;
       right: 3%;
@@ -192,19 +192,32 @@
 .features__offer-container {
   display: grid;
 	justify-content: center;
-  grid-template-columns: auto auto auto auto;
-	gap: 40px;
+  grid-template-columns: 19% 19% 19% 19%;
+	gap: 39px;
 	width: 100%;
 	height: 100%;
   @include media-query.sp{
     gap: 16px;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
+    max-width: 300px;
+  }
+}
+
+.features__offer-item {
+  position: relative;
+  width: 100%;
+  max-width: 180px;
+
+  &::after {
+    content: '';
+    display: block;
+    padding-top: function.getpercent(220, 212);
   }
 }
 
 .features__offer-circle {
-	width: function.getpc(220px);
-	height: function.getpc(212px);
+  width: 100%;
+  height: 100%;
 	background-image: url('../img/index-page/features/features-circle.svg');
 	background-repeat: no-repeat;
 	background-position: center;
@@ -213,11 +226,12 @@
 	flex-direction: column;
 	padding-top: 10px;
 	gap: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
   @include media-query.sp {
     max-width: 180px;
     max-height: 180px;
-    width: 30vw;
-    height: 30vw;
   }
 }
 
