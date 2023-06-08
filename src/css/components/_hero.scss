@@ -21,7 +21,7 @@
   background-image: url("../img/index-page/hero/Hero-image.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 100% 50%;
   @include media-query.mx980 {
     background-image: url("../img/index-page/hero/Hero-image2.jpg");
     background-position: 10% 50%;

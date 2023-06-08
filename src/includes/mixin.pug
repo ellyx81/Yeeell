@@ -55,8 +55,9 @@ mixin case(headingModifier, heading, category, title, thumbnail, paragraphModifi
       p.case__paragraph(class= paragraphModifier)!= paragraph
     h3.case__views-text 
       | 投稿から 1 か月で
-      span.case__views-amount= views
-      | 回再生 !
+      span.case__views-newline
+        span.case__views-amount= views
+        | 回再生 !
 
 mixin step(heading, image)
   .steps__box

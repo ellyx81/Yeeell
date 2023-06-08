@@ -171,7 +171,7 @@
   &--small {
     font-size: function.getpc(24px);
     @include media-query.sp {
-      font-size: 10px;
+      font-size: 14px;
       width: 100%;
       min-height: 80px;
     }
@@ -186,11 +186,17 @@
   @include mixin.center;
   height: 130px;
   @include media-query.sp {
-    font-size: 12px;
+    flex-wrap: wrap;
+    font-size: 16px;
     height: auto;
     padding-top: 10px;
-    max-height: 100px;
   }
+}
+
+.case__views-newline {
+  @include mixin.center;
+  align-items: flex-start;
+  padding-top: 10px;
 }
 
 .case__views-amount {

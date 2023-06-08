@@ -78,6 +78,7 @@
     width: 85%;
     @include media-query.sp {
       font-size: 12px;
+      padding-right: 10px;
     }
   }
 

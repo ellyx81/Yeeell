@@ -47,7 +47,6 @@
   line-height: function.getem(28, 49);
   text-align: center;
   @include media-query.sp {
-    max-width: 90vw;
     font-size: 14px;
   }
 }
