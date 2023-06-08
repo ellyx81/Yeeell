@@ -60,6 +60,10 @@
   flex-direction: column;
   gap: 20px;
   padding-bottom: 40px;
+  @include media-query.sp {
+    gap: 10px;
+    padding-bottom: 25px;
+  }
 }
 
 .footer__logo {
