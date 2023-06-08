@@ -1,9 +1,12 @@
-mixin video(thumbnail, views)
+mixin video(thumbnail, views, url)
   .video__wrapper
     .video__box
-      a(href="#").video-player
+      .video-player.js-video-item
         img(src= thumbnail, alt="").video-player__thumbnail
         .video-player__icon
+      .video-player__overlay
+        .video-player__player
+          iframe(src= url title="YouTube video player" frameborder="0" allowfullscreen='').video-player__frame.js-video-frame
       p.video__views-text 
         | １か月間で 
         span.video__views-amount= views
@@ -49,9 +52,12 @@ mixin case(headingModifier, heading, category, title, thumbnail, paragraphModifi
           span.case__video-category= category
           span.case__video-title= title
         .case__video
-          a(href="#").video-player
+          .video-player.js-video-item
             img(src= thumbnail, alt="").video-player__thumbnail
             .video-player__icon
+          .video-player__overlay
+            .video-player__player
+              iframe(src= "https://www.youtube.com/embed/KqdwjtzmQPA" title="YouTube video player" frameborder="0" allowfullscreen='').video-player__frame.js-video-frame
       p.case__paragraph(class= paragraphModifier)!= paragraph
     h3.case__views-text 
       | 投稿から 1 か月で
