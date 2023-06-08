@@ -66,8 +66,12 @@
     flex-direction: column;
     gap: 20px;
     margin: 40px auto 0;
-    padding: 0 20px;
+    padding: 0 15%;
     width: 100%;
+  }
+  @media screen and (max-width: 440px) {
+    padding: 0;
+    width: 90vw;
   }
 }
 
@@ -77,6 +81,10 @@
   max-width: function.getpc(620px);
   @include media-query.sp {
     margin: auto;
+    left: -50px;
+  }
+  @media screen and (max-width: 440px) {
+    left: 0;
   }
 
   &::after {
@@ -89,6 +97,11 @@
     margin-top: 70px;
     @include media-query.sp {
       margin-top: 0;
+      left: auto;
+      right: -50px;
+    }
+    @media screen and (max-width: 440px) {
+      right: 0;
     }
   }
 }

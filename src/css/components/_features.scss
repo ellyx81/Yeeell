@@ -58,6 +58,7 @@
   max-width: 90vw;
   @include media-query.sp {
     font-size: 20px;
+    line-height: 1.4em;
   }
 
   &-highlight {
@@ -66,6 +67,10 @@
     background-color: color.$white;
     padding: 3px 7px 6px;
     margin: 0 9px;
+    @include media-query.sp {
+      padding: 1px 5px;
+      margin: 0 4px;
+    }
 
     &--blue {
       color: color.$blue;
@@ -95,7 +100,7 @@
   @include media-query.sp{
     width: 60vw;
     height: 200px;
-    top: 140px;
+    top: 130px;
   }
 
   &-text {
@@ -178,6 +183,7 @@
   padding: 50px;
   @include media-query.sp {
     width: 90vw;
+    max-width: 500px;
     height: auto;
     padding: 20px;
     gap: 30px;

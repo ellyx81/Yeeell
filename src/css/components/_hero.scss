@@ -59,7 +59,7 @@
   transform: rotate(-20deg);
   z-index: 1;
   @include media-query.sp {
-    font-size: function.getpc(40px);
+    font-size: 30px;
     margin: -20px 0 0 -24px;
   }
 }

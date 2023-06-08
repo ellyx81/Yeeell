@@ -3,10 +3,15 @@
 @use 'settings/font-family' as font-family;
 @use 'tools/function' as function;
 @use 'tools/mixin' as mixin;
+@use 'tools/media-queries' as media-query;
 
 .case {
   height: function.getpc(1175px);
   background-color: color.$pastel-pink;
+  @include media-query.sp {
+    height: auto;
+    padding: 80px 0;
+  }
 }
 
 .case__main-container {
@@ -29,6 +34,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 57% 50%;
+    @include media-query.sp {
+      background-position: top center;
+      background-repeat: repeat-y;
+    }
   }
 }
 
@@ -43,6 +52,12 @@
   background-color: color.$purple;
   padding: function.getpc(30px) function.getpc(50px);
   border-radius: function.getpc(15px);
+  @include media-query.sp {
+    width: 90vw;
+    height: auto;
+    padding: 6px 12px;
+    border-radius: 5px;
+  }
 }
 
 .case__box{
@@ -53,7 +68,10 @@
   @include mixin.center;
   flex-direction: column;
   justify-content: flex-start;
-
+  @include media-query.sp {
+    border-radius: 3px;
+    padding-bottom: 50px;
+  }
 }
 
 .case__heading {
@@ -62,9 +80,19 @@
   color: color.$purple;
   height: 115px;
   @include mixin.center;
+  @include media-query.sp {
+    font-size: 16px;
+    height: 90px;
+    padding: 25px 0;
+  }
 
   &--small {
-    font-size: function.getpc(30px);
+    font-size: function.getpc(30px);  
+    @include media-query.sp {
+      font-size: 14px;
+      height: 90px;
+      padding: 25px 0;
+    }
   }
 }
 
@@ -73,12 +101,21 @@
   gap: 30px;
   align-items: flex-start;
   height: function.getpc(305px);
+  @include media-query.sp {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 20px;
+  }
 }
 
 .case__left-section {
   @include mixin.center;
   flex-direction: column;
   align-items: flex-start;
+  @include media-query.sp {
+    width: 100%;
+  }
 }
 
 .case__video-details {
@@ -96,6 +133,9 @@
   background-color: color.$purple;
   padding: 3px 7px;
   border-radius: function.getpc(12px);
+  @include media-query.sp {
+    font-size: 12px;
+  }
 }
 
 .case__video-title {
@@ -103,11 +143,18 @@
   font-weight: font-weight.$bold;
   color: color.$purple;
   letter-spacing: .1em;
+  @include media-query.sp {
+    font-size: 12px;
+  }
 }
 
 .case__video {
   width: function.getpc(464px);
   height: function.getpc(261px);
+  @include media-query.sp {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .case__paragraph {
@@ -115,9 +162,19 @@
   font-size: function.getpc(28px);
   line-height: function.getem(28, 49);
   width: function.getpc(510px);
+  @include media-query.sp {
+    font-size: 14px;
+    width: 100%;
+    min-height: 80px;
+  }
 
   &--small {
     font-size: function.getpc(24px);
+    @include media-query.sp {
+      font-size: 10px;
+      width: 100%;
+      min-height: 80px;
+    }
   }
 }
 
@@ -128,6 +185,12 @@
   letter-spacing: .04em;
   @include mixin.center;
   height: 130px;
+  @include media-query.sp {
+    font-size: 12px;
+    height: auto;
+    padding-top: 10px;
+    max-height: 100px;
+  }
 }
 
 .case__views-amount {
@@ -143,4 +206,8 @@
   background-position: center bottom;
   padding-bottom: 30px;
   margin: 0 10px;
+  @include media-query.sp {
+    font-size: 30px;
+    height: 40px;
+  }
 }

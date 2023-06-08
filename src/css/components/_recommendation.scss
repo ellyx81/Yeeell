@@ -3,11 +3,17 @@
 @use 'settings/font-family' as font-family;
 @use 'tools/function' as function;
 @use 'tools/mixin' as mixin;
+@use 'tools/media-queries' as media-query;
 
 .recommendation {
   height: function.getpc(931px);
   background-color: color.$primary;
   margin-top: function.getpc(100px);
+  @include media-query.sp {
+    height: auto;
+    margin-top: 30px;
+    padding: 70px 0;
+  }
 }
 
 .recommendation__container {
@@ -18,6 +24,9 @@
   gap: 70px;
   position: relative;
   margin-top: -20px;
+  @include media-query.sp {
+    gap: 45px;
+  }
 
   &::before { //sets the background image
     content: "";
@@ -37,12 +46,25 @@
 .recommendation__title {
   @include mixin.center;
   gap: 15px;
+  @include media-query.sp {
+    gap: 5px;
+  }
+
+  img {
+    @include media-query.sp {
+      width: 300px;
+    }
+  }
 
   &-decoration {
     background: url("../img/index-page/recommendation/title-decoration.svg");
     background-repeat: no-repeat;
     width: function.getpc(60px);
     height: function.getpc(80px);
+    @include media-query.sp {
+      width: 24px;
+      height: 40px;
+    }
 
     &--right {
      transform: scaleX(-1);
@@ -60,6 +82,15 @@
   @include mixin.center;
   gap: 40px;
   padding: 55px;
+  @include media-query.sp {
+    height: auto;
+    flex-direction: column;
+    padding: 0;
+    max-width: 500px;
+    gap: 15px;
+    height: auto;
+    padding-bottom: 15px;
+  }
 }
 
 .recommendation__top-text {
@@ -71,11 +102,20 @@
   left: -55px;
   transform: rotate(-20deg);
   z-index: 1;
+  @include media-query.sp {
+    font-size: 30px;
+    left: -22px;
+  }
 }
 
 .recommendation__video {
   width: function.getpc(560px);
   height: function.getpc(315px);
+  @include media-query.sp {
+    width: 100%;
+    height: auto;
+    border-radius: 7px 7px 0 0;
+  }
 }
 
 .recommendation__right-section {
@@ -86,6 +126,9 @@
   height: 100%;
   width: 100%;
   max-width: function.getpc(480px);
+  @include media-query.sp {
+    max-width: 90%;
+  }
 }
 
 .recommendation__top-container {
@@ -96,6 +139,9 @@
 .recommendation__user-name {
   font-size: function.getpc(20px);
   color: color.$dark-gray;
+  @include media-query.sp {
+    font-size: 14px;
+  }
 }
 
 .recommendation__user-icon,
@@ -105,6 +151,10 @@
   height: function.getpc(30px);
   background-position: center;
   background-repeat: no-repeat;
+  @include media-query.sp {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .recommendation__user-icon {
@@ -115,6 +165,9 @@
   font-size: function.getpc(24px);
   color: color.$text;
   line-height: function.getem(24, 42);
+  @include media-query.sp {
+    font-size: 12px;
+  }
 }
 
 .recommendation__bottom-container {

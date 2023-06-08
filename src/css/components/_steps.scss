@@ -2,11 +2,17 @@
 @use 'settings/font-weight' as font-weight;
 @use 'tools/function' as function;
 @use 'tools/mixin' as mixin;
+@use 'tools/media-queries' as media-query;
 
 .steps {
   height: function.getpc(638px);
   background-color: color.$pastel-purple;
   margin-top: function.getpc(100px);
+  @include media-query.sp {
+    height: auto;
+    padding: 70px 0;
+    margin-top: 30px;
+  }
 }
   
 .steps__container {
@@ -19,12 +25,18 @@
 
 .steps__title {
   margin-top: -50px;
+  @include media-query.sp {
+    margin-top: 0;
+  }
 }
 
 .steps__items {
 	width: 100%;
 	@include mixin.center;
   gap: 32px;
+  @include media-query.sp {
+    flex-direction: column;
+  }
 }
 
 .steps__box {
@@ -37,6 +49,12 @@
   @include mixin.center;
   flex-direction: column;
   justify-content: flex-start;
+  @include media-query.sp {
+    flex-direction: column-reverse;
+    width: 90vw;
+    max-width: 300px;
+    height: auto;
+  }
 
   &::before { //setting the right arrow
     content: "";
@@ -48,6 +66,11 @@
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 16px solid color.$green;
+    @include media-query.sp {
+      transform: rotate(90deg) scale(1.2);
+      top: 143px;
+      right: 47%;
+    }
   }
 
   &:last-child { //remove arrow on last step
@@ -65,10 +88,19 @@
   height: function.getpc(90px);
   width: 100%;
   border-radius: function.getpc(7px) function.getpc(7px) 0 0;
+  @include media-query.sp {
+    font-size: 14px;
+    height: 50px;
+    border-radius: 0;
+  }
 }
 
 .steps__icon {
   margin-top: 15px;
   width: function.getpc(144px);
   height: function.getpc(146px);
+  @include media-query.sp {
+    height: 80px;
+    width: auto;
+  }
 }
