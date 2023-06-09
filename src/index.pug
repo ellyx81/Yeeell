@@ -18,7 +18,7 @@ block content
             h2.hero__subs-number 197,000
               span.hero__subs-unit 人
           .hero__subs-decoration.hero__subs-decoration--right
-      .hero__widget
+      .hero__widget.wow.animate__animated.animate__zoomIn.animate__slow
         .hero__widget-dialogue
           p.hero__widget-dialogue-text 約 60 秒で完了 ！
         a(href="#").hero__widget-seal
@@ -129,4 +129,7 @@ block content
           +faq("Q5", "直接インフルエンサーと取引するのと何が違うのでしょうか？", "動画制作についてのディレクションなどは弊社にて対応するため、 お客様のご負担や工数を最小限におさえることができます。")
           +faq("Q6", "とりあえず話だけ聞いてみたいのですが？", "ご相談頂くだけでも結構です。弊社からのご提案や実績などの話をお聞きになって、 ご検討頂けますと幸いです。")
 block script
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js")
+  script.
+    new WOW().init();
   script(src="js/top/index.ts")

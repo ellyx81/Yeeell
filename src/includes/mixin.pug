@@ -1,5 +1,5 @@
 mixin video(thumbnail, views)
-  .video__wrapper
+  .video__wrapper.wow.animate__animated.animate__fadeInDown
     .video__box
       a(href="#").video-player
         img(src= thumbnail, alt="").video-player__thumbnail
@@ -10,7 +10,7 @@ mixin video(thumbnail, views)
         |  回再生！
 
 mixin dialogue(modifier, text)
-  .features__dialogue-bubble(class= modifier)
+  .features__dialogue-bubble(class= modifier).wow.animate__animated.animate__fadeInDown
     p.features__dialogue-bubble-text!= text
 
 mixin features(icon, text)
