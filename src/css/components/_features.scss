@@ -97,7 +97,7 @@
   width: function.getpc(444px);
   height: function.getpc(399px);
   animation-duration: .3s;
-  animation-delay: 1s;
+  animation-delay: .5s;
   @include mixin.center;
   @include media-query.sp{
     width: 60%;
@@ -123,7 +123,7 @@
     left: 375px;
     width: function.getpc(487px);
     height: function.getpc(346px);
-    animation-delay: .5s;
+    animation-delay: .25s;
     @include media-query.sp{
       width: 70%;
       height: 200px;
@@ -144,7 +144,7 @@
     width: function.getpc(339px);
     height: function.getpc(338px);
     z-index: -1;
-    animation-delay: 1.5s;
+    animation-delay: .75s;
     @include media-query.sp{
       width: 50%;
       height: 190px;
@@ -163,7 +163,7 @@
     bottom: 18px;
     width: function.getpc(339px);
     height: function.getpc(334px);
-    animation-delay: 2s;
+    animation-delay: 1s;
     @include media-query.sp{
       width: 50%;
       height: 190px;
