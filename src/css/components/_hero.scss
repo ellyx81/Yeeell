@@ -11,7 +11,7 @@
   max-height: 1080px;
   position: relative;
   @include media-query.sp {
-    max-height: 100vh;
+    max-height: 100%;
   }
 }
 
@@ -21,7 +21,7 @@
   background-image: url("../img/index-page/hero/Hero-image.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: right;
   @include media-query.mx980 {
     background-image: url("../img/index-page/hero/Hero-image2.jpg");
     background-position: 10% 50%;
@@ -43,10 +43,10 @@
     left: 50px;
   }
   @include media-query.sp {
-    width: 80vw;
+    width: 80%;
     max-width: 250px;
-    bottom: 10vh;
-    left: 10vw;
+    bottom: 12%;
+    left: 20px;
   }
 }
 

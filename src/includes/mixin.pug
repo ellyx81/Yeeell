@@ -17,9 +17,10 @@ mixin dialogue(modifier, text)
     p.features__dialogue-bubble-text!= text
 
 mixin features(icon, text)
-  .features__offer-circle
-    img(src= icon, alt="").features__offer-icon
-    span.features__offer-text= text
+  .features__offer-item
+    .features__offer-circle
+      img(src= icon, alt="").features__offer-icon
+      span.features__offer-text= text
 
 mixin call-to-action(headline, text, dialogue, btnText, dialogueSizeModifier, dialogueTextModifier)
   section.main__section.call-to-action.skew
@@ -61,8 +62,9 @@ mixin case(headingModifier, heading, category, title, thumbnail, paragraphModifi
       p.case__paragraph(class= paragraphModifier)!= paragraph
     h3.case__views-text 
       | 投稿から 1 か月で
-      span.case__views-amount= views
-      | 回再生 !
+      span.case__views-newline
+        span.case__views-amount= views
+        | 回再生 !
 
 mixin step(heading, image)
   .steps__box
