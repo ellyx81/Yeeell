@@ -11,7 +11,7 @@ mixin video(thumbnail, views, url)
         |  回再生！
 
 mixin dialogue(modifier, text)
-  .features__dialogue-bubble(class= modifier).wow.animate__animated.animate__fadeInDown
+  .features__dialogue-bubble(class= modifier).wow.animate__animated.animate__bounceInDown
     p.features__dialogue-bubble-text!= text
 
 mixin features(icon, text)
