@@ -110,7 +110,7 @@
 .video__box {
   background-image: url("../img/index-page/video/video-decoration.svg");
   background-repeat: no-repeat;
-  padding: 12% 11% 12% 4%;
+  padding: 12% 11% 14% 4%;
   position: absolute;
   top: 0;
   left: 0;
@@ -141,6 +141,6 @@
   line-height: 1em;
   margin: 0 10px;
   @include media-query.sp {
-    font-size: 30px;
+    font-size: 22px;
   }
 }
