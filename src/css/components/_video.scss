@@ -80,7 +80,6 @@
   position: relative;
   width: 100%;
   max-width: function.getpc(620px);
-  animation-duration: 1s;
   @include media-query.sp {
     margin: auto;
     left: -50px;
@@ -93,10 +92,6 @@
     content: '';
     display: block;
     padding-top: function.getpercent(620, 527); 
-  }
-
-  &:nth-child(1) {
-    animation-delay: 0.3s;
   }
 
   &:nth-child(2) {
