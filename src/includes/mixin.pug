@@ -1,20 +1,20 @@
 mixin video(thumbnail, views)
-  .video__wrapper.wow.animate__animated.animate__fadeInDown
+  .video__wrapper.wow.animate__animated
     .video__box
       a(href="#").video-player
         img(src= thumbnail, alt="").video-player__thumbnail
         .video-player__icon
-      p.video__views-text 
+      p.video__views-text.wow.animate__animated.animate__zoomIn.animate__faster 
         | １か月間で 
         span.video__views-amount= views
         |  回再生！
 
 mixin dialogue(modifier, text)
-  .features__dialogue-bubble(class= modifier).wow.animate__animated.animate__bounceInDown
+  .features__dialogue-bubble(class= modifier).wow.animate__animated.animate__fadeInDown
     p.features__dialogue-bubble-text!= text
 
 mixin features(icon, text)
-  .features__offer-item.wow.animate__animated.animate__bounceIn
+  .features__offer-item.wow.animate__animated.animate__bounceIn.animate__slow
     .features__offer-circle
       img(src= icon, alt="").features__offer-icon
       span.features__offer-text= text

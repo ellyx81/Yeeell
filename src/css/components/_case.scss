@@ -196,8 +196,6 @@
 
 .case__views-newline {
   @include mixin.center;
-  align-items: flex-start;
-  padding-top: 10px;
 }
 
 .case__views-amount {
@@ -211,7 +209,6 @@
   background-image: url("../img/index-page/case/case-text-decoration.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
-  padding-bottom: 30px;
   margin: 0 10px;
   @include media-query.sp {
     font-size: 30px;
