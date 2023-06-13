@@ -1,0 +1,80 @@
+mixin video(thumbnail, views, url)
+  .video__wrapper
+    .video__box
+      .video-player.js-video-item
+        img(src= thumbnail, alt="").video-player__thumbnail
+        .video-player__icon
+        span.video-player__url.js-url= url
+      p.video__views-text.wow.animate__animated.animate__zoomIn.animate__faster 
+        | １か月間で 
+        span.video__views-amount= views
+        |  回再生！
+
+mixin dialogue(modifier, text)
+  .features__dialogue-bubble(class= modifier).wow.animate__animated.animate__fadeInDown
+    p.features__dialogue-bubble-text!= text
+
+mixin features(icon, text)
+  .features__offer-item.wow.animate__animated.animate__bounceIn.animate__slow
+    .features__offer-circle
+      img(src= icon, alt="").features__offer-icon
+      span.features__offer-text= text
+
+mixin call-to-action(headline, text, dialogue, btnText, dialogueSizeModifier, dialogueTextModifier)
+  section.main__section.call-to-action.skew
+    .call-to-action__container.skew__remove-skew
+      h2.call-to-action__headline= headline
+      p.call-to-action__text!= text
+      .call-to-action__bottom-container
+        .call-to-action__dialogue.wow.animate__animated.animate__bounceIn(class= dialogueSizeModifier)
+          span.call-to-action__dialogue-text(class= dialogueTextModifier)!= dialogue
+        button.call-to-action__btn
+          img(src="img/icons/plane-icon-pink.svg", alt="").call-to-action__btn-icon 
+          span.call-to-action__btn-text= btnText
+
+mixin pr-points(sectionModifier, bulletModifier, image, heading, paragraph)
+  .pr-points__section(class= sectionModifier)
+    .pr-points__image-wrapper.wow.animate__animated.animate__fadeInLeft
+      img(src= image, alt="").pr-points__image
+    .pr-points__text-container.wow.animate__animated.animate__fadeInRight
+      .pr-points__heading-container
+        .pr-points__bullet(class= bulletModifier)
+        h2.pr-points__heading= heading
+      p.pr-points__paragraph!= paragraph
+
+mixin case(headingModifier, heading, category, title, thumbnail, paragraphModifier, paragraph, views, url)
+  li.splide__slide.case__container
+    h2.case__heading(class= headingModifier)!= heading
+    .case__upper-container
+      .case__left-section 
+        h3.case__video-details
+          span.case__video-category= category
+          span.case__video-title= title
+        .case__video
+          .video-player.js-video-item
+            img(src= thumbnail, alt="").video-player__thumbnail
+            .video-player__icon
+            span.video-player__url.js-url= url
+      p.case__paragraph(class= paragraphModifier)!= paragraph
+    h3.case__views-text.wow.animate__animated.animate__zoomIn.animate__faster
+      | 投稿から 1 か月で
+      span.case__views-newline
+        span.case__views-amount= views
+        | 回再生 !
+
+mixin step(heading, image)
+  .steps__box.wow.animate__animated.animate__fadeInDown
+    h3.steps__text= heading
+    img(src= image, alt="").steps__icon
+
+mixin faq(questionNum, questionTitle, answer)
+  li.faq__box.js-faq
+    .faq__question
+      span.faq__question-number= questionNum
+      h3.faq__question-title= questionTitle
+      .faq__question-btn
+        .faq__question-horizontal-line
+        .faq__question-vertical-line
+    .faq__answer.js-answer
+      span.faq__answer-label A
+      p.faq__answer-text!= answer
