@@ -1,0 +1,44 @@
+@use 'settings/font-weight' as font-weight;
+@use 'tools/mixin' as mixin;
+@use 'tools/function' as function;
+@use 'tools/media-queries' as media-query;
+
+.header {
+  @include mixin.center;
+  justify-content: flex-start;
+  padding: function.getpc(32px);
+  position: fixed;
+  z-index: 3;
+  @include media-query.sp {
+    padding: 10px;
+  }
+}
+
+.header__logo {
+  height: function.getpc(80px);
+  cursor: pointer;
+  @include media-query.mx980 {
+    height: 48px;
+  }
+  @include media-query.sp {
+    height: 32px;
+  }
+}
+
+.header__text {
+  font-size: function.getpc(30px);
+  font-weight: font-weight.$black;
+  line-height: function.getem(30, 45);
+  letter-spacing: 0.045em;
+  margin-left: function.getpc(40px);
+  margin-top: function.getpc(2px);
+  @include media-query.mx980 {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  @include media-query.sp {
+    font-size: 12px;
+    margin-left: 12px;
+    letter-spacing: 0em;
+  }
+}

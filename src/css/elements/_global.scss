@@ -3,14 +3,20 @@
 @use 'tools/media-queries' as media-queries;
 
 html {
-  font-family: font-family.$yugo;
+  font-family: font-family.$noto;
   color: color.$text;
   font-size: 10px;
   font-feature-settings: 'palt';
+  scroll-behavior: smooth;
   @media screen and (max-width: 980px) {
     min-width: 980px;
   }
   @include media-queries.sp {
     min-width: 100%;
   }
+}
+body {
+  max-width: 1920px;
+  margin: auto;
+  background-color: color.$white;
 }

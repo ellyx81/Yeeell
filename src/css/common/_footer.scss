@@ -1,0 +1,82 @@
+@use 'settings/color' as color;
+@use 'settings/font-weight' as font-weight;
+@use 'tools/function' as function;
+@use 'tools/mixin' as mixin;
+@use 'tools/media-queries' as media-query;
+
+.footer {
+  background-color: color.$primary;
+}
+
+.footer__border {
+  margin-top: function.getpc(100px); //set white border
+  background-color: color.$primary;
+  padding-bottom: 200px;
+  margin-bottom: -200px;
+  z-index: -1;
+  @include media-query.sp {
+    margin-top: 30px;
+  }
+}
+
+.footer__to-top-btn {
+  width: 100%;
+  height: function.getpc(60px);
+  background-color: color.$text;
+  cursor: pointer;
+  @include mixin.center;
+  @include media-query.sp {
+    height: 34px;
+  }
+
+  &-icon {
+    width: function.getpc(21px);
+    height: function.getpc(21px);
+    background-image: url("../img/icons/to-top-icon.svg");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    @include media-query.sp {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+.footer__container {
+  width: 100%;
+  @include mixin.center;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 40px;
+  @include media-query.sp {
+    gap: 10px;
+    padding-bottom: 25px;
+  }
+}
+
+.footer__logo {
+  width: function.getpc(178px);
+  height: function.getpc(40px);
+  margin-top: 30px;
+  @include media-query.sp {
+    width: 120px;
+    height: 20px;
+    margin-top: 20px;
+  }
+}
+
+.footer__social-icon {
+  width: function.getpc(25px);
+  height: function.getpc(20px);
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.footer__text {
+  font-size: 12px;
+  text-align: center;
+  line-height: function.getem(12, 36);
+  @include media-query.sp {
+    font-size: 10px;
+  }
+}
