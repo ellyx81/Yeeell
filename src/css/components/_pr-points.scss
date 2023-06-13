@@ -113,6 +113,12 @@
   
   &--reverse {
     flex-direction: row-reverse;
+    .pr-points__text-container {
+      animation-name: fadeInLeft;
+    }
+    .pr-points__image-wrapper {
+      animation-name: fadeInRight;
+    }
     @include media-query.sp {
       flex-direction: column;
     }
