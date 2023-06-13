@@ -3,10 +3,12 @@
 @use 'trumps/helper';
 @use 'trumps/splide';
 @use 'common/header';
+@use 'common/footer';
 @use 'common/skew';
 @use 'common/title';
 @use 'common/video-player';
 @use 'common/call-to-action';
+@use 'common/modal';
 @use 'components/hero';
 @use 'components/video';
 @use 'components/features';
@@ -15,3 +17,4 @@
 @use 'components/about';
 @use 'components/recommendation';
 @use 'components/steps';
+@use 'components/faq';
