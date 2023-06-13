@@ -16,3 +16,8 @@
   $result: calc(1366/1920) * $val;
   @return $result;
 }
+
+@function getpercent($width, $height) {
+  $result: calc($height / $width) * 100%;
+  @return $result;
+}
