@@ -21,102 +21,29 @@
     padding-top: function.getpercent(528, 297);
   }
 
-  &.is-opened{
-    & + .video-player__overlay {
-      visibility: visible;
-      top: 50%;
-      transform: translate(-50%, -50%) scale(1);
+  &__thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.1);
     }
   }
-}
 
-.video-player__thumbnail {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: scale(1.1);
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../img/icons/play-icon.svg");
+    width: function.getpc(100px);
+    height: function.getpc(100px);
   }
-}
 
-.video-player__icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: url("../img/icons/play-icon.svg");
-  width: function.getpc(100px);
-  height: function.getpc(100px);
-}
-
-.video-player__overlay {
-  position: fixed;
-  align-items: center;
-  justify-content: center;
-  top: 50%;
-  left: 50%;
-  z-index: 9;
- // transform: translate(-50%, -50%) scale(0.1);
-  visibility: hidden;
-  //transition: transform 0.2s;
-
-
-  // &::after {
-  //   content: "";
-  //   background-color: color.$black;
-  //   height: 100vw;
-  //   width: 100vh;
-  //   top: 0;
-  //   left: 0;
-  //   position: absolute;
-  //   opacity: 0.4;
-  // }
-}
-
-.video-player__player {
-  position: relative;
-  // top: 0%;
-  // left: 0%;
-  //top: -18px;
-  //box-shadow: 0 0 0 10000px rgba(0,0,0,.4);
-  height: 450px;
-  width: 800px; 
-  object-fit: cover;
-  border-radius: 10px;
-  overflow: hidden;
-  border-radius: 1px solid red;
-  // @include media-query.mx1440 {
-  //   height: 420px;
-  //   width: 748px;
-  // }
-  // @include media-query.mx1200 {
-  //   height: 340px;
-  //   width: 600px;
-  // }
- 
-  @include media-query.mx980 {
-    height: 368px;
-    width: 650px;
+  &__url {
+    display: none;
   }
-  @include media-query.sp {
-    height: 280px;
-    width: 500px;
-  }
-  @media screen and (max-width: 560px) {
-    height: 200px;
-    width: 360px;
-  }
-  // @include media-query.mx370 {
-  //   height: 200px;
-  //   width: 290px;
-  // }
-}
-
-.video-player__frame {
-  position: relative;
-  width: 100%;
-  height: 100%;
 }
