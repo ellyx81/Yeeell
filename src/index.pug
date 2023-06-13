@@ -19,17 +19,17 @@ block content
               span.hero__subs-unit 人
           .hero__subs-decoration.hero__subs-decoration--right
       .hero__widget
-        .hero__widget-dialogue
+        .hero__widget-dialogue.wow.animate__animated.animate__heartBeat
           p.hero__widget-dialogue-text 約 60 秒で完了 ！
         a(href="#").hero__widget-seal
           img(src="img/icons/plane-icon.svg", alt="").hero__widget-icon
           p.hero__widget-text お問い合わせ
-    section.main__section.video.skew
+    section.main__section.video.skew.js-section
       .video__container.skew__remove-skew
         img(src="img/index-page/video/video-title.svg", alt="").title
         .video__items
-          +video("img/index-page/video/movie-1.jpg", "74,563")
-          +video("img/index-page/video/movie-2.jpg", "42,825")
+          +video("img/index-page/video/movie-1.jpg", "74,563", "https://www.youtube.com/embed/xfQlUmeGmdk")
+          +video("img/index-page/video/movie-2.jpg", "42,825", "https://www.youtube.com/embed/xQ6NuBub75E")
     section.main__section.features.skew
       .features__container.skew__remove-skew
         .features__top-section
@@ -69,16 +69,16 @@ block content
           +pr-points("", "", "img/index-page/pr-points/image1.png", "独自のメイク法", "人中短縮や中顔面が短く見えるハイライトの入れ方など独自のメイク法を編み出し高クオリティなメイク法を発信。<br> ちょっとした工夫で整形無しでも変われる ”自然” なメイク方法を教えてくれると好評をいただいております ！")
           +pr-points("pr-points__section--reverse", "pr-points__bullet--second", "img/index-page/pr-points/image2.png", "視聴者に寄り添った企画", "視聴者への寄り添い度は抜群 ！ ！<br> 元々二重まぶたですが、 奥二重に悩んでいる視聴者も多いということで、 アイテープを使用して奥二重にしたメイクを実施。<br> どこまでも視聴者に寄り添うスタイルが 「ここまでやってくれる人はいない」 と大変好評です。")
           +pr-points("", "pr-points__bullet--third", "img/index-page/pr-points/image3.png", "30代からの支持も", "30代に見えない30歳。<br> 以前は20代からの支持を多く集めていましたが、 30代に入ったことで30代以降からの検索流入が増えています。<br> 30代あざとい系女子の冬メイクは1ヶ月で約30万回再生を獲得しております。")
-    section.main__section.case.skew 
+    section.main__section.case.skew.js-section
       .case__main-container.skew__remove-skew 
         img(src="img/index-page/case/case-title.svg", alt="").title.case__title
         .case__outer-border
           .case__box.splide
             .splide__track
               ul.splide__list
-                +case("", "【豊胸】 整形巨乳の宿命", "案件商品", "ナイトブラ", "img/index-page/case/movie-6.jpg", "", "持ち前のトーク力で視聴者の悩みに寄り添った訴求を行いました。<br> 大幅に売上へ直結したとクライアント様より大変高評価をいただきました ！", "40,058")
-                +case("", "【超自然】 ナチュラルすぎる整形メイクでデカ目タレ目鬼盛れ", "案件商品", "アイライナー", "img/index-page/case/movie-8.jpg", "", "アイライナー案件で様々なカラーを駆使しながらも、 自然にデカ目に見えるメイク動画で訴求しました。<br>メイクテクを伝授する企画でしたが、 商材の特徴をうまく活かしたメイクにすることで自然に特徴をアピール。", "47,554")
-                +case("case__heading--small", "あざとい / 中国強め / 小悪魔 / 神コスメとメイクでどんな顔にでもなれる ！<br> こんなの魔法としか言いようがない", "案件商品", "アイシャドウ・リップ", "img/index-page/case/movie-2.jpg", "case__paragraph--small", "1つの動画で3つのメイクを実施。<br> 商品種類の豊富さをアピールするため、 色や塗り方次第でどんな顔にもなれるということを訴求しました。<br> 可愛いめのメイクや強めのメイクなど雰囲気の違うメイクを施すことによって様々好みの視聴者が楽しめるような企画を考案しました。", "42,825")
+                +case("", "【豊胸】 整形巨乳の宿命", "案件商品", "ナイトブラ", "img/index-page/case/movie-6.jpg", "", "持ち前のトーク力で視聴者の悩みに寄り添った訴求を行いました。<br> 大幅に売上へ直結したとクライアント様より大変高評価をいただきました ！", "40,058", "https://www.youtube.com/embed/b2LrY4CCBmU")
+                +case("", "【超自然】 ナチュラルすぎる整形メイクでデカ目タレ目鬼盛れ", "案件商品", "アイライナー", "img/index-page/case/movie-8.jpg", "", "アイライナー案件で様々なカラーを駆使しながらも、 自然にデカ目に見えるメイク動画で訴求しました。<br>メイクテクを伝授する企画でしたが、 商材の特徴をうまく活かしたメイクにすることで自然に特徴をアピール。", "47,554", "https://www.youtube.com/embed/xfQlUmeGmdk")
+                +case("case__heading--small", "あざとい / 中国強め / 小悪魔 / 神コスメとメイクでどんな顔にでもなれる ！<br> こんなの魔法としか言いようがない", "案件商品", "アイシャドウ・リップ", "img/index-page/case/movie-2.jpg", "case__paragraph--small", "1つの動画で3つのメイクを実施。<br> 商品種類の豊富さをアピールするため、 色や塗り方次第でどんな顔にもなれるということを訴求しました。<br> 可愛いめのメイクや強めのメイクなど雰囲気の違うメイクを施すことによって様々好みの視聴者が楽しめるような企画を考案しました。", "42,825", "https://www.youtube.com/embed/xQ6NuBub75E")
     section.main__section.about.skew
       .about__container.skew__remove-skew
         img(src="img/logos/yeeell-logo.svg", alt="").about__logo
@@ -91,6 +91,46 @@ block content
           | 総合的なサポートも可能です。#[br] #[br]
           | まずはお気軽にご相談ください ！
     +call-to-action("Contact us", "インフルエンサーマーケティングが <br> 初めての企業様でも安心です ！", "お気軽に <br> ご相談ください", "話を聞いてみる", "call-to-action__dialogue--larger", "call-to-action__dialogue-text--smaller")
-
+    section.main__section.recommendation.skew.js-section
+      .recommendation__container.skew__remove-skew 
+        .recommendation__title
+          .recommendation__title-decoration
+          img(src="img/index-page/recommendation/recommendation-title.svg", alt="").title
+          .recommendation__title-decoration.recommendation__title-decoration--right
+        .recommendation__box
+          p.recommendation__top-text Recommended
+          .video-player.recommendation__video.js-video-item
+            img(src= "img/index-page/recommendation/movie-7.jpg", alt="").video-player__thumbnail
+            .video-player__icon
+            span.video-player__url.js-url https://www.youtube.com/embed/2JS02YnZ5Bc
+          .recommendation__right-section
+            .recommendation__top-container
+              .recommendation__user-icon
+              h3.recommendation__user-name クリエイター担当者
+            p.recommendation__paragraph 人中短縮や中顔面短縮メイクなどの整形級メイクはちゅるにおまかせください ！#[br] スキンケアオタクでもあるため、 ターゲット層へ最適なご提案をさせていただきます。 高身長を活かしたファッション動画などマルチに対応できますので、 様々なジャンルでお気軽にご相談ください。
+            .recommendation__bottom-container
+              .recommendation__like-icon
+              .recommendation__comment-icon
+    section.main__section.steps.skew
+      .steps__container.skew__remove-skew
+        img(src="img/index-page/steps/steps-title.svg", alt="").title.steps__title
+        .steps__items
+          +step("ヒアリング", "img/index-page/steps/step-1.svg")
+          +step("企画・キャスティング", "img/index-page/steps/step-2.svg")
+          +step("制作", "img/index-page/steps/step-3.svg")
+          +step("投稿・レポート", "img/index-page/steps/step-4.svg")
+    section.main__section.faq.skew
+      .faq__main-container.skew__remove-skew 
+        img(src="img/index-page/faq/faq-title.svg", alt="").title.faq__title
+        ul.faq__container.js-faqs
+          +faq("Q1", "料金はどのくらいかかりますか？", "クリエイターに応じて金額が異なります。<br> 弊社では10万円～販売しているクリエイターがおりますので、 予算にあわせたご提案が可能です。")
+          +faq("Q2", "インフルエンサーの年齢層は？", "20代のインフルエンサーが中心となりますが、 40代のインフルエンサーも所属しており、 幅広いターゲットへ訴求が可能です。")
+          +faq("Q3", "発注から実施までどれくらいかかりますか？", "1ヵ月を想定しております。<br> お客様のご状況に応じて調整することも可能でございます。")
+          +faq("Q4", "動画公開前に確認することは可能でしょうか？", "1回のみとなりますが、 動画を公開する前に事前にご確認を頂くことが可能です。")
+          +faq("Q5", "直接インフルエンサーと取引するのと何が違うのでしょうか？", "動画制作についてのディレクションなどは弊社にて対応するため、 お客様のご負担や工数を最小限におさえることができます。")
+          +faq("Q6", "とりあえず話だけ聞いてみたいのですが？", "ご相談頂くだけでも結構です。弊社からのご提案や実績などの話をお聞きになって、 ご検討頂けますと幸いです。")
 block script
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js")
+  script.
+    new WOW().init();
   script(src="js/top/index.ts")
