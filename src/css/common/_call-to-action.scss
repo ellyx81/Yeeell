@@ -3,20 +3,29 @@
 @use 'settings/font-family' as font-family;
 @use 'tools/function' as function;
 @use 'tools/mixin' as mixin;
+@use 'tools/media-queries' as media-query;
 
 .call-to-action {
   height: function.getpc(540px);
   background-color: color.$secondary;
   margin-top: function.getpc(100px);
+  @include media-query.sp {
+    margin-top: 30px;
+    height: auto;
+    padding: 80px 0 100px;
+  }
 }
 
 .call-to-action__container {
-	width: 100%;
 	height: 100%;
 	@include mixin.center;
 	flex-direction: column;
   gap: 15px;
   margin-top: -15px;
+  @include media-query.sp {
+    margin: -40px auto 0;
+    width: 90%;
+  }
 }
 
 .call-to-action__headline {
@@ -25,6 +34,9 @@
   font-weight: font-weight.$regular;
 	color: color.$primary;
 	transform: rotate(-10deg);
+  @include media-query.sp {
+    font-size: 28px;
+  }
 }
 
 .call-to-action__text {
@@ -34,6 +46,9 @@
   text-align: center;
   letter-spacing: 0.04em;
   line-height: function.getem(40, 60);
+  @include media-query.sp {
+    font-size: 18px;
+  }
 }
 
 .call-to-action__bottom-container {
@@ -53,6 +68,11 @@
   justify-content: center;
   gap: 14px;
   position: absolute;
+  @include media-query.sp {
+    max-width: 270px;
+    height: 60px;
+    margin-top: 80px;
+  }
 
   &,
   & * {
@@ -68,11 +88,17 @@
     font-weight: font-weight.$bold;
     letter-spacing: .04em;
     color: color.$secondary;
+    @include media-query.sp {
+      font-size: 18px;
+    }
   }
 
   &-icon {
     width: function.getpc(60px);
     height: auto;
+    @include media-query.sp {
+      width: 28px;
+    }
   }
 }
 
@@ -85,11 +111,42 @@
   @include mixin.center;
   position: relative; 
   left: -300px; 
-  top: -25px; 
+  top: -25px;
+  z-index: 1;
+  @include media-query.sp {
+    width: 150px;
+    height: 60px;
+    left: -25%;
+    top: -8px;
+  }
+  
+  &--larger {
+    width: function.getpc(297px);
+    height: function.getpc(150px);
+    margin-left: -30px;
+    @include media-query.sp {
+      width: 150px;
+      height: 70px;
+      left: -24%;
+      top: -10px;
+    }
+  }
 
   &-text {
     font-size: function.getpc(36px);
     font-weight: font-weight.$bold;
     color: color.$white;
+    line-height: function.getem(27, 40.5);
+    text-align: center;
+    @include media-query.sp {
+      font-size: 14px;
+    }
+
+    &--smaller {
+      font-size: function.getpc(27px);
+      @include media-query.sp {
+        font-size: 12px;
+      }
+    }
   }
 }

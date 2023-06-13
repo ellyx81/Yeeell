@@ -5,6 +5,7 @@
   position: relative;
   transform: skewY(6deg);
   overflow: hidden;
+  transform-origin: 100% 0;
 }
 
 .skew__remove-skew {

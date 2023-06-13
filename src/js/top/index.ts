@@ -1,9 +1,13 @@
-import test from './components/test'
+import accordion from './components/accordion'
+import animation from './components/animation'
+import slider from './components/slider'
 
 document.addEventListener(
   'DOMContentLoaded',
   () => {
-    test()
+    slider()
+    accordion()
+    animation()
   },
   false
 )
