@@ -3,11 +3,17 @@
 @use 'settings/font-family' as font-family;
 @use 'tools/function' as function;
 @use 'tools/mixin' as mixin;
+@use 'tools/media-queries' as media-query;
 
 .faq {
   background-color: color.$pastel-blue;
   margin-top: function.getpc(100px);
   padding: 70px 0 100px;
+  @include media-query.sp {
+    height: auto;
+    padding: 55px 0;
+    margin-top: 30px;
+  }
 }
   
 .faq__main-container,
@@ -21,9 +27,14 @@
 
 .faq__container {
   gap: 24px;
+  @include media-query.sp {
+    padding: 0 20px;
+    max-width: 500px;
+    gap: 18px;
+  }
 }
 
-.faq__box{
+.faq__box {
   background-color: color.$white;
   width: 100%;
   max-width: function.getpc(1000px);
@@ -32,6 +43,7 @@
   @include mixin.center;
   flex-direction: column;
   cursor: pointer;
+  padding: 16px;
 
   & * {
     cursor: pointer;
@@ -54,12 +66,20 @@
     font-weight: font-weight.$bold;
     font-size: function.getpc(40px);
     width: 65px;
+    @include media-query.sp {
+      font-size: 22px;
+      width: 50px;
+    }
   }
 
   &-title {
     font-size: function.getpc(30px);
     line-height: function.getem(30, 40);
     width: 85%;
+    @include media-query.sp {
+      font-size: 12px;
+      padding-right: 10px;
+    }
   }
 
   &-btn {
@@ -68,6 +88,10 @@
     width: function.getpc(50px);
     height: function.getpc(50px);
     position: relative;
+    @include media-query.sp {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &-horizontal-line,
@@ -78,6 +102,10 @@
     height: function.getpc(3px);
     border-radius: 2px;
     left: 29%;
+    @include media-query.sp {
+      height: 1.5px;
+      width: 10px;
+    }
   }
   
   &-horizontal-line {
@@ -107,6 +135,10 @@
     width: 65px;
     padding: 20px 0 0 10px;
     color: color.$blue;
+    @include media-query.sp {
+      font-size: 22px;
+      width: 50px;
+    }
   }
   
   &-text {
@@ -114,5 +146,9 @@
     font-size: function.getpc(24px);
     line-height: function.getem(24, 42);
     width: 90%;
+    @include media-query.sp {
+      font-size: 12px;
+      padding-top: 16px;
+    }
   }
 }
