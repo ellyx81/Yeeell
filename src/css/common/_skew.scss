@@ -5,7 +5,7 @@
   position: relative;
   transform: skewY(6deg);
   overflow: hidden;
-  margin-top: function.getpc(100px);
+  transform-origin: 100% 0;
 }
 
 .skew__remove-skew {
