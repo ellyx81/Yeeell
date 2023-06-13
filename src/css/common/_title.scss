@@ -1,6 +1,11 @@
 @use 'tools/function' as function;
+@use 'tools/media-queries' as media-query;
 
 .title {
   height: function.getpc(50px);
   width: auto;
+  @include media-query.sp {
+    height: 25px;
+    width: 90%;
+  }
 }

@@ -1,28 +1,13 @@
-@use 'settings/color' as color;
 @use 'tools/function' as function;
 @use 'tools/mixin' as mixin;
 
 .skew {
   position: relative;
-  top: -80px;
   transform: skewY(6deg);
   overflow: hidden;
-  @include mixin.center;
-  @media screen and (min-width: 1700px) {
-    top: -145px;
-  }
-    
-  &::before { //set white border
-    top: 0;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: function.getpc(100px);
-    background-color: color.$white;
-    z-index: 1;
-  }
+  transform-origin: 100% 0;
 }
 
-.skew__container {
+.skew__remove-skew {
   transform: skewY(-6deg); //remove skew inside the container
 }
