@@ -1,4 +1,5 @@
 @use 'tools/function' as function;
+@use 'tools/media-queries' as media-query;
 @use 'settings/color' as color;
 
 .splide__track {
@@ -9,6 +10,9 @@
   width: 100%;
   position: absolute;
   bottom: 9%;
+  @include media-query.sp {
+    bottom: 7%;
+  }
 }
 
 .splide__arrow {
@@ -27,11 +31,17 @@
   &--prev {
     background-image: url("../img/index-page/case/slider-arrow-left.svg") !important;
     left: 33% !important;
+    @include media-query.sp {
+      left: 8% !important;
+    }
   }
 
   &--next {
     background-image: url("../img/index-page/case/slider-arrow-right.svg") !important;
     right: 33% !important;
+    @include media-query.sp {
+      right: 8% !important;
+    }
   }
 
   svg {
@@ -41,6 +51,9 @@
 
 .splide__pagination {
   bottom: 7.5% !important;
+  @include media-query.sp {
+    bottom: 5% !important;
+  }
 
   &__page {
     height: function.getpc(20px) !important;
