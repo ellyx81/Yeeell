@@ -1,0 +1,13 @@
+@use 'tools/function' as function;
+@use 'tools/mixin' as mixin;
+
+.skew {
+  position: relative;
+  transform: skewY(6deg);
+  overflow: hidden;
+  transform-origin: 100% 0;
+}
+
+.skew__remove-skew {
+  transform: skewY(-6deg); //remove skew inside the container
+}
