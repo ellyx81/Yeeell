@@ -9,31 +9,10 @@
   z-index: 3;
   height: 94px;
   width: 100%;
-  padding: 20px 30px;
   font-family: font-family.$yugo;
-  background-color: color.$white;
-}
 
-.header-lower__left {
-  @include mixin.center;
-  flex-direction: column;
-  align-items: flex-start;
-
-  &-top-text {
-    font-size: 15px;
-    color: color.$white;
-    font-weight: font-weight.$bold;
-    z-index: 5;
-  }
-
-  &-logo {
-    width: 169px;
-    height: 33px;
-    margin-top: 10px;
-    z-index: 5;
-  }
-
-  &-decoration {
+  &::before { //left triangle
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -42,7 +21,51 @@
     border-style: solid;
     border-width: 220px 460px 0 0;
     border-color: color.$primary-lower transparent transparent transparent;
+    z-index: 4;
   }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: color.$white;
+    position: fixed;
+    z-index: 3;
+    height: 94px;
+    width: 100%;
+  }
+}
+
+.header-lower__left {
+  @include mixin.center;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px 30px;
+  z-index: 5;
+
+  &-top-text {
+    font-size: 15px;
+    color: color.$white;
+    font-weight: font-weight.$bold;
+  }
+
+  &-logo {
+    width: 169px;
+    height: 33px;
+    margin-top: 10px;
+  }
+}
+
+.header-lower__right {
+  @include mixin.center;
+  flex: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 4;
+  padding: 15px 30px;
 }
 
 .header-lower__nav {
@@ -60,11 +83,11 @@
   }
 }
 
-.header-lower__right {
+.header-lower__tel {
   @include mixin.center;
   flex-direction: column;
 
-  &-telephone {
+  &-number {
     font-size: 20px;
     font-weight: font-weight.$bold;
     color: color.$primary-lower;
