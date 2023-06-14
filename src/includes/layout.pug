@@ -18,7 +18,10 @@ html(lang="ja").js-html
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
 
   body
-    include header.pug
+    - if (top)
+      include header.pug
+    - else
+      include header-lower.pug
     block content
     include footer.pug
     include modal.pug
