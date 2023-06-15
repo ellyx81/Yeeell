@@ -192,8 +192,8 @@
     border: 1px solid color.$gray-lower;
 
     &:hover {
-      background-color: color.$text-lower;
-      color: color.$white;
+      border: 2px solid color.$text;
+      background-color: color.$white;
     }
   }
 }
