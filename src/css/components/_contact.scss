@@ -182,9 +182,18 @@
   border-radius: 4px;
   cursor: pointer;
 
+  &:hover {
+    background-color: color.$text-lower;
+  }
+
   &--white {
     background-color: color.$white;
     color: color.$text-lower;
     border: 1px solid color.$gray-lower;
+
+    &:hover {
+      background-color: color.$text-lower;
+      color: color.$white;
+    }
   }
 }
