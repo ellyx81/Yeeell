@@ -10,19 +10,26 @@
   margin: auto;
   font-family: font-family.$yugo;
   color: color.$text-lower;
-  padding-bottom: 300px;
+  padding-bottom: 230px;
 }
 
 .contact__form {
   @include mixin.center;
   flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  font-weight: font-weight.$medium;
+  font-size: 18px;
+  line-height: function.getem(18, 30);
 }
 
 .contact__top-instruction {
-  font-weight: font-weight.$medium;
-  font-size: 18px;
-  padding: 40px 0;
-  line-height: function.getem(18, 30);
+  padding-top: 40px;
+  align-self: flex-start;
+
+  &--bold {
+    font-weight: font-weight.$bold;
+  }
 }
 
 .contact__terms {
@@ -79,14 +86,17 @@
 
 .contact__input {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 10px;
   @include mixin.center;
   justify-content: flex-start;
+  gap: 22px;
 
   &--inquiry {
+    align-items: flex-start;
+
     .contact__input-label,
     .contact__input-required-label {
-      margin-top: -100px;
+      margin-top: 10px;
     }
   }
 
@@ -94,7 +104,7 @@
     font-size: 16px;
     font-weight: font-weight.$bold;
     width: 100%;
-    max-width: 150px;
+    max-width: 130px;
   }
 
   &-required-label {
@@ -102,9 +112,11 @@
     font-size: 14px;
     font-weight: font-weight.$medium;
     background-color: color.$yellow-lower;
-    width: 20%;
+    width: 80%;
     max-width: 50px;
-    padding: 8px 10px;
+    height: 30px;
+    padding: 0 10px;
+    margin: 0 18px;
     border-radius: 4px;
   
     &::before {
@@ -123,7 +135,6 @@
   &-box {
     width: 100%;
     height: 50px;
-    margin-left: 28px;
     cursor: auto;
     border: 1px solid color.$dark-gray-lower;
     border-radius: 4px;
@@ -151,8 +162,15 @@
   }
 }
 
+.contact__btn-wrapper {
+  @include mixin.center;
+  width: 100%;
+  gap: 40px;
+}
+
 .contact__btn {
   width: 100%;
+  align-self: center;
   max-width: 340px;
   height: 60px;
   color: color.$white;
@@ -160,7 +178,13 @@
   font-size: 26px;
   font-weight: font-weight.$bold;
   border: none;
-  margin-top: 50px;
+  margin-top: 20px;
   border-radius: 4px;
   cursor: pointer;
+
+  &--white {
+    background-color: color.$white;
+    color: color.$text-lower;
+    border: 1px solid color.$gray-lower;
+  }
 }
