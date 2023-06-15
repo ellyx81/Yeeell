@@ -2,6 +2,7 @@
 @use 'elements/global';
 @use 'trumps/helper';
 @use 'trumps/splide';
+@use 'trumps/input';
 @use 'common/header';
 @use 'common/footer';
 @use 'common/skew';
@@ -20,3 +21,4 @@
 @use 'components/recommendation';
 @use 'components/steps';
 @use 'components/faq';
+@use 'components/contact';
