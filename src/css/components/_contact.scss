@@ -144,55 +144,55 @@
     }
   }
 
-  &-label-wrap {
+  &-label {
     @include mixin.center;
     justify-content: flex-start;
     width: 100%;
     max-width: 250px;
-  }
 
-  &-label {
-    font-size: 16px;
-    font-weight: font-weight.$bold;
-    width: 100%;
-    max-width: 166px;
-    @include media-query.sp {
-      font-size: 12px;
-      width: auto;
-    }
-  }
-
-  &-required-label {
-    color: color.$text-lower;
-    font-size: 14px;
-    font-weight: font-weight.$medium;
-    background-color: color.$yellow-lower;
-    height: 30px;
-    padding: 0 10px;
-    margin: 0 18px;
-    border-radius: 4px;
-    @include media-query.sp {
-      font-size: 10px;
+    &-text {
+      font-size: 16px;
+      font-weight: font-weight.$bold;
       width: 100%;
-      max-width: 40px;
-      height: 20px;
-      margin: 0 5px;
-    }
-  
-    &::before {
-      content: "必須";
+      max-width: 166px;
+      @include media-query.sp {
+        font-size: 12px;
+        width: auto;
+      }
     }
 
-    &--not-required {
-      background-color: color.$gray-lower;
-
+    &-required {
+      color: color.$text-lower;
+      font-size: 14px;
+      font-weight: font-weight.$medium;
+      background-color: color.$yellow-lower;
+      height: 30px;
+      padding: 0 10px;
+      margin: 0 18px;
+      border-radius: 4px;
+      @include media-query.sp {
+        font-size: 10px;
+        width: 100%;
+        max-width: 40px;
+        height: 20px;
+        margin: 0 5px;
+      }
+    
       &::before {
-        content: "任意";
+        content: "必須";
+      }
+  
+      &--not-required {
+        background-color: color.$gray-lower;
+  
+        &::before {
+          content: "任意";
+        }
       }
     }
   }
 
-  &-name-wrap {
+  &-box-wrap {
     @include mixin.center;
     justify-content: flex-start;
     width: 100%;
