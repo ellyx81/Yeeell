@@ -9,6 +9,9 @@
   height: 150px;
   overflow: hidden;
   @include mixin.center;
+  @include media-query.sp {
+    height: 130px;
+  }
 
   &::after { //right triangle
     content: '';
@@ -42,15 +45,21 @@
     color: color.$primary-lower;
     z-index: 1;
     @include mixin.center;
+    @include media-query.sp {
+      font-size: 24px;
+    }
 
     &::before,
-    &::after {
+    &::after { //text decoration
       content: '';
       width: 64px;
       height: 3px;
       margin: 0 15px;
       transform: skew(318deg);
       background-color: color.$primary-lower;
+      @include media-query.sp {
+        width: 40px;
+      }
     }
   }
 }
