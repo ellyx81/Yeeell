@@ -22,45 +22,57 @@ block content
           input(type="checkbox" name="terms").contact__terms-check-box
           label.contact__terms-check-label 同意する
       .contact__input 
-        label.contact__input-label お名前
-        .contact__input-required-label
-        input(type="text" name="lname" placeholder="姓" required).contact__input-box
-        input(type="text" name="fname" placeholder="名" required).contact__input-box
+        .contact__input-label-wrap
+          label.contact__input-label お名前
+          .contact__input-required-label
+        .contact__input-name-wrap
+          input(type="text" name="lname" placeholder="姓" required).contact__input-box
+          input(type="text" name="fname" placeholder="名" required).contact__input-box
       .contact__input 
-        label.contact__input-label お名前（フリガナ）
-        .contact__input-required-label
-        input(type="text" name="lname" placeholder="セイ" required).contact__input-box
-        input(type="text" name="fname" placeholder="メイ" required).contact__input-box
+        .contact__input-label-wrap
+          label.contact__input-label お名前（フリガナ）
+          .contact__input-required-label
+        .contact__input-name-wrap
+          input(type="text" name="lname" placeholder="セイ" required).contact__input-box
+          input(type="text" name="fname" placeholder="メイ" required).contact__input-box
       .contact__input 
-        label.contact__input-label 所在地
-        .contact__input-required-label
+        .contact__input-label-wrap
+          label.contact__input-label 所在地
+          .contact__input-required-label
         select(id="location" name="location" required).contact__input-box.contact__input-box--select
+          option(disabled='', selected='', value='').contact__input-option
           option(value="option 1").contact__input-option オプション1
           option(value="option 2").contact__input-option オプション2
           option(value="option 3").contact__input-option オプション3
       .contact__input 
-        label.contact__input-label 会社名・団体名
-        .contact__input-required-label.contact__input-required-label--not-required
+        .contact__input-label-wrap
+          label.contact__input-label 会社名・団体名
+          .contact__input-required-label.contact__input-required-label--not-required
         input(type="text" name="org").contact__input-box
       .contact__input 
-        label.contact__input-label 部署
-        .contact__input-required-label.contact__input-required-label--not-required
+        .contact__input-label-wrap
+          label.contact__input-label 部署
+          .contact__input-required-label.contact__input-required-label--not-required
         input(type="text" name="dept").contact__input-box
       .contact__input 
-        label.contact__input-label 役職
-        .contact__input-required-label.contact__input-required-label--not-required
+        .contact__input-label-wrap
+          label.contact__input-label 役職
+          .contact__input-required-label.contact__input-required-label--not-required
         input(type="text" name="director").contact__input-box
       .contact__input 
-        label.contact__input-label メールアドレス
-        .contact__input-required-label
+        .contact__input-label-wrap
+          label.contact__input-label メールアドレス
+          .contact__input-required-label
         input(type="email" name="email" required).contact__input-box
-      .contact__input 
-        label.contact__input-label 電話番号
-        .contact__input-required-label
+      .contact__input
+        .contact__input-label-wrap 
+          label.contact__input-label 電話番号
+          .contact__input-required-label
         input(type="tel" name="tel" required).contact__input-box.contact__input-box--tel
       .contact__input.contact__input--inquiry
-        label.contact__input-label お問い合わせ内容
-        .contact__input-required-label
+        .contact__input-label-wrap
+          label.contact__input-label お問い合わせ内容
+          .contact__input-required-label
         textarea(name="inquiry" required).contact__input-box.contact__input-box--textarea
       button(type="button" name="proceed").contact__btn 確認画面に進む
 block script
