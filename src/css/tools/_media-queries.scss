@@ -18,6 +18,12 @@
   }
 }
 
+@mixin mx1350 {
+  @media screen and (max-width: 1350px) {
+    @content;
+  }
+}
+
 @mixin mx1200 {
   @media screen and (max-width: 1200px) {
     @content;
