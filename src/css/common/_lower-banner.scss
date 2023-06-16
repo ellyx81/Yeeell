@@ -2,6 +2,7 @@
 @use 'settings/font-family' as font-family;
 @use 'settings/color' as color;
 @use 'tools/mixin' as mixin;
+@use 'tools/media-queries' as media-query;
 
 .banner {
   width: 100%;
@@ -9,20 +10,10 @@
   overflow: hidden;
   @include mixin.center;
 
-  &::before { //white image filter
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 240px;
-    top: 0;
-    background-color: color.$white;
-    opacity: .7;
-  }
-
   &::after { //right triangle
     content: '';
     position: absolute;
-    top: 20px;
+    top: 25px;
     right: 0;
     width: 0;
     height: 0;
@@ -30,19 +21,22 @@
     border-width: 0 0 220px 460px;
     border-color: transparent transparent color.$blue-green transparent;
     z-index: 3;
+
+    @include media-query.mx1350 {
+      display: none;
+    }
   }
 
   &__image {
-    position: absolute;
-    top: 0;
     width: 100%;
-    height: 240px;
+    height: 100%;
     object-fit: cover;
     z-index: -1;
   }
 
 
   &__text {
+    position: absolute;
     font-size: 38px;
     font-weight: font-weight.$black;
     color: color.$primary-lower;
