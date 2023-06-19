@@ -1,0 +1,179 @@
+@use 'settings/color' as color;
+@use 'settings/font-weight' as font-weight;
+@use 'settings/font-family' as font-family;
+@use 'tools/function' as function;
+@use 'tools/mixin' as mixin;
+@use 'tools/media-queries' as media-query;
+
+.footer-lower {
+  font-family: font-family.$yugo;
+  color: color.$text-lower;
+
+  &__socials {
+    @include mixin.center;
+    gap: 10px;
+    margin-top: 90px;
+    @include media-query.sp {
+      margin-top: 55px;
+    }
+
+    &-item {
+      @include mixin.center;
+      width: 46px;
+      height: 46px;
+      border-radius: 40px;
+      background-color: color.$twitter-bg;
+      cursor: pointer;
+      transition: transform .3s ease;
+      @include media-query.sp {
+        width: 35px;
+        height: 35px;
+      }
+
+      &:hover {
+        transform: translate(0, -5px);
+      }
+
+      &--facebook {
+        background-color: color.$facebook-bg;
+      }
+
+      img {
+        width: 40%;
+        height: 40%;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__sitemap {
+    @include mixin.center;
+    flex-wrap: wrap;
+    font-size: 16px;
+    font-weight: font-weight.$medium;
+    gap: 35px;
+    margin: 35px auto;
+    @include media-query.sp {
+      width: 90%;
+      font-size: 12px;
+      gap: 24px;
+      margin: 25px auto;
+    }
+
+    a {
+      cursor: pointer;
+      position: relative;
+
+      &::after { // set underline when hovered
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: color.$text-lower;
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-out;
+      }
+  
+      &:hover {
+        &::after { //set underline hover animation
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
+    }
+  }
+
+  &__lower-container {
+    @include mixin.center;
+    width: 100%;
+    flex-direction: column;
+    background-color: color.$light-gray-lower;
+    padding: 30px 0;
+    @include media-query.sp {
+      padding: 20px 5%;
+    }
+  }
+
+  &__logos {
+    @include mixin.center;
+    gap: 40px;
+    @include media-query.sp {
+      gap: 25px;
+    }
+
+    &-first {
+      width: 56px;
+      height: 58px;
+      @include media-query.sp {
+        width: 42px;
+        height: 44px;
+      }
+    }
+
+    &-second {
+      width: 153px;
+      height: 24px;
+      @include media-query.sp {
+        width: 102px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__company-name {
+    font-size: 20px;
+    font-weight: font-weight.$bold;
+    margin: 28px auto 10px;
+    @include media-query.sp {
+      font-size: 14px;
+      margin: 20px auto 5px;
+    }
+  }
+
+  &__address,
+  &__contact {
+    font-size: 16px;
+    font-weight: font-weight.$medium;
+    line-height: function.getem(16, 24);
+    @include media-query.sp {
+      font-size: 12px;
+    }
+  }
+
+  &__contact {
+    @include mixin.center;
+    gap: 25px;
+  }
+
+  &__copyright {
+    font-size: 14px;
+    font-weight: font-weight.$medium;
+    text-align: center;
+    margin-top: 25px;
+    @include media-query.sp {
+      font-size: 12px;
+      margin-top: 20px;
+    }
+  }
+
+  &__to-top-btn {
+    position: fixed;
+    bottom: 35px;
+    right: 28px;
+    opacity: .5;
+    width: 46px;
+    height: 46px;
+    background-image: url("../img/icons/to-top-icon-lower.svg");
+    background-position: center;
+    cursor: pointer;
+    @include media-query.sp {
+      bottom: 20px;
+      right: 5%;
+      width: 35px;
+      height: 35px;
+    }
+  }
+}

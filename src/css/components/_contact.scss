@@ -10,7 +10,6 @@
   margin: auto;
   font-family: font-family.$yugo;
   color: color.$text-lower;
-  padding-bottom: 230px;
   @include media-query.mx980 {
     width: 90%;
   }
