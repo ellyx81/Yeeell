@@ -144,6 +144,8 @@
     font-size: 16px;
     font-weight: font-weight.$bold;
     cursor: pointer;  
+    position: relative;
+    transition: all .5s ease;
     @include media-query.mx1350 {
       width: 100%;
       padding: 20px 70px 20px 35px;
@@ -153,9 +155,29 @@
       font-size: 12px;
     }
 
+    &::after { // set underline when hovered
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1.5px;
+      bottom: 0;
+      left: 0;
+      background-color: color.$primary-lower;
+      transform-origin: bottom right;
+      transition: transform 0.5s ease-out;
+    }
+
     &:hover {
       @include media-query.mx1350 {
         background-color: color.$blue-green;
+      }
+      &::after { //set underline hover animation
+        transform: scaleX(1);
+        transform-origin: bottom left;
+        @include media-query.mx1350 {
+          transform: scaleX(0);
+        }
       }
     }
   }
@@ -190,6 +212,7 @@
     height: 34px;
     @include mixin.center;
     cursor: pointer;
+    transition: all .5s ease;
     @include media-query.mx1350 {
       width: 100%;
       margin-top: 5px;
@@ -200,7 +223,8 @@
     }
 
     &:hover {
-      background-color: color.$text-lower;
+      background-color: color.$blue-green;
+      letter-spacing: .2em;
     }
 
     &-text {
