@@ -169,11 +169,17 @@
     background-image: url("../img/icons/to-top-icon-lower.svg");
     background-position: center;
     cursor: pointer;
+    transition: all .5s ease;
     @include media-query.sp {
       bottom: 20px;
       right: 5%;
       width: 35px;
       height: 35px;
+    }
+
+    &:hover {
+      opacity: .7;
+      transform: translate(0, -5px);
     }
   }
 }
