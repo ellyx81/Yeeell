@@ -6,8 +6,9 @@
 @use 'settings/color' as color;
 
 .contact {
+  width: 100%;
   max-width: 980px;
-  margin: auto;
+  margin-bottom: auto;
   font-family: font-family.$yugo;
   color: color.$text-lower;
   @include media-query.mx980 {

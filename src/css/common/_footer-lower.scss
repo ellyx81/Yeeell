@@ -8,6 +8,7 @@
 .footer-lower {
   font-family: font-family.$yugo;
   color: color.$text-lower;
+  width: 100%;
 
   &__socials {
     @include mixin.center;
