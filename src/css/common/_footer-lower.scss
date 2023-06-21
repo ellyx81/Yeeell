@@ -147,6 +147,15 @@
   &__contact {
     @include mixin.center;
     gap: 25px;
+    
+    a {
+      cursor: pointer;
+      transition: color .3s ease;
+
+      &:hover {
+        color: color.$blue-green;
+      }
+    }
   }
 
   &__copyright {

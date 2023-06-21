@@ -7,14 +7,8 @@ const toggler = () => {
 
     if (toggle) {
       toggle.addEventListener("click", () => {
-        
-        if (header.classList.contains("is-active")) {
-          header.classList.remove("is-active");
-          html.style.overflowY = 'visible';
-        } else {
-          header.classList.add("is-active");
-          html.style.overflowY = 'hidden';
-        }
+        header.classList.toggle("is-active");
+        html.style.overflowY = 'visible';
       });
       
       header.addEventListener("mouseleave", () => {

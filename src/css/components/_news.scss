@@ -24,7 +24,6 @@
   border-bottom: 1px solid color.$primary-lower; 
   @include media-query.sp {
     flex-wrap: wrap;
-
   }
 }
 
@@ -47,7 +46,6 @@
 
   &:hover {
     background-color: color.$blue-green;
-    letter-spacing: .2em;
     border: 1px solid color.$blue-green;
   }
 
@@ -93,10 +91,6 @@
 
   &:hover {
     background-color: color.$light-gray-lower;
-
-    .news__item-headline {
-      letter-spacing: .1em;
-    }
   }
 
   & * {
@@ -271,7 +265,7 @@
     letter-spacing: .025em;
     text-align: center;
     font-weight: font-weight.$bold;
-    margin: 25px 0 20px;
+    margin: 25px 0 15px;
     @include media-query.sp {
       font-size: 16px;
     }
@@ -311,17 +305,25 @@
       border-right: none;
       border-bottom: 1px solid color.$gray-lower;
     }
+
     &-number {
       font-size: 32px;
       font-weight: font-weight.$bold;
       margin-top: 10px;
+      cursor: pointer;
+      transition: color .3s ease;
       @include media-query.sp {
         font-size: 20px;
+      }
+
+      &:hover {
+        color: color.$blue-green;
       }
 
       span {
         font-size: 20px;
         margin: 0 4px;
+        cursor: pointer;
       }
     }
 
