@@ -36,8 +36,8 @@
   height: 36px;
   border: 1px solid color.$gray-lower;
   cursor: pointer; 
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: background .3s ease;
+  transition: background .3s ease;
   @include media-query.sp {
     font-size: 12px;
     height: 25px;
@@ -46,7 +46,8 @@
 
   &:hover {
     background-color: color.$blue-green;
-    border: 1px solid color.$blue-green;
+    border: none;
+    color: color.$white;
   }
 
   &.is-active {
@@ -58,16 +59,21 @@
 }
 
 .news__container {
-  display: grid;
+  display: none;
   grid-template-columns: auto auto auto auto;
   column-gap: 24px;
   row-gap: 32px;
+  justify-content: start;
   padding: 50px 0;
   @include media-query.sp {
     grid-template-columns: auto auto;
     column-gap: 16px;
     row-gap: 20px;
     padding: 40px 0;
+  }
+
+  &.active {
+    display: grid;
   }
 }
 
