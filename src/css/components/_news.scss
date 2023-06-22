@@ -293,14 +293,13 @@
       margin-top: 25px;
       cursor: pointer;
       border: none;
-      transition: all .5s ease;
+      transition: background .5s ease;
       @include media-query.sp {
         height: 50px;
       }
 
       &:hover {
         background-color: color.$blue-green;
-        letter-spacing: .2em;
       }
 
       span {
