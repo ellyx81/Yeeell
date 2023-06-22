@@ -52,21 +52,15 @@ block content
       .news__container.js-news#abroad
         +news("海外", "img/news-page/news-5.png", "2019年02月01日", "東北地方のブロック紙「河北新報」に弊社で外壁工事の施行を請け負...ました入浴施設")
         +news("海外", "img/news-page/news-5.png", "2019年02月01日", "東北地方のブロック紙「河北新報」に弊社で外壁工事の施行を請け負...ました入浴施設")
-      .news__pagination.wp-pagenavi
-        .news__pagination-arrow
-        .news__pagination-number.is-active.page.current 
-          span 1
-        .news__pagination-number.page
-          span 2
-        .news__pagination-number.page
-          span 3
-        .news__pagination-number.page
-          span 4
-        .news__pagination-number.page
-          span 5
-        .news__pagination-number.page
-          span 6
-        .news__pagination-arrow.news__pagination-arrow--next.extend
+      .wp-pagenavi
+        a(href="#")
+        a(href="#").first.page.current 1
+        a(href="#").page 2
+        a(href="#").page 3
+        a(href="#").page 4
+        a(href="#").page 5
+        a(href="#").last.page 6
+        a(href="#") 
       .news__inquiry 
         h3.news__heading.wow.animate__animated.animate__fadeInDown お問い合わせ
         h4.news__inquiry-subheading.wow.animate__animated.animate__fadeInDown.animate__slow 無料相談お受けします。お気軽にお問い合わせ下さい！

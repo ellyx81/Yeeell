@@ -1,0 +1,71 @@
+@use 'tools/mixin' as mixin;
+@use 'tools/media-queries' as media-query;
+@use 'settings/color' as color;
+@use 'settings/font-weight' as font-weight;
+
+.wp-pagenavi {
+  @include mixin.center;
+  gap: 9px;
+
+  a {
+    @include mixin.center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid color.$gray-lower;
+    cursor: pointer;
+    -webkit-transition: background .3s ease;
+    transition: background .3s ease;
+    @include media-query.sp {
+      font-size: 12px;
+      width: 30px;
+      height: 30px;
+    }
+
+    &:hover {
+      background-color: color.$blue-green;
+      border: none;
+      color: color.$white;
+    }
+
+    &.page {
+      font-size: 18px;
+      font-weight: font-weight.$medium;
+      @include media-query.sp {
+        font-size: 12px;
+      }
+    }
+
+    &.current {
+      background: color.$primary-lower;
+      color: color.$white;
+      border: none;
+      cursor: auto;
+    }
+
+    &:first-of-type,
+    &:last-of-type { //select the previous and next arrows
+      background-position: center;
+      background-size: 22%;
+      background-repeat: no-repeat;
+      transition: transform .3s ease;
+    }
+
+    &:first-of-type {
+      background-image: url("../img/icons/left-arrow.svg");
+
+      &:hover {
+        transform: translate(-5px);
+        background-image: url("../img/icons/left-arrow-white.svg");
+      }
+    }
+
+    &:last-of-type {
+      background-image: url("../img/icons/right-arrow.svg");
+  
+      &:hover {
+        transform: translate(5px);
+        background-image: url("../img/icons/right-arrow-white.svg");
+      }
+    }
+  }
+}
