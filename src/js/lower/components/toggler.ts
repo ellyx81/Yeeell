@@ -8,19 +8,19 @@ const toggler = () => {
     if (toggle) {
       toggle.addEventListener("click", () => {
         header.classList.toggle("is-active");
-        html.style.overflowY = 'visible';
+        if (header.classList.contains("is-active")) {
+          html.style.overflowY = "hidden";
+        } else {
+          html.style.overflowY = "visible";
+        }
       });
-      
+
       header.addEventListener("mouseleave", () => {
         header.classList.remove("is-active");
-        html.style.overflowY = 'visible';
+        html.style.overflowY = "visible";
       });
     }
   }
-  
-}
+};
 
-export default toggler
-  
-  
-  
+export default toggler;
