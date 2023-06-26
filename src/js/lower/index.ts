@@ -1,3 +1,4 @@
+import categoryTabs from './components/category-tabs'
 import test from './components/test'
 import toggler from './components/toggler'
 
@@ -6,6 +7,7 @@ document.addEventListener(
   () => {
     test()
     toggler()
+    categoryTabs()
   },
   false
 )

@@ -3,6 +3,7 @@
 @use 'trumps/helper';
 @use 'trumps/splide';
 @use 'trumps/input';
+@use 'trumps/pagenavi';
 @use 'common/header';
 @use 'common/footer';
 @use 'common/skew';
@@ -12,6 +13,7 @@
 @use 'common/modal';
 @use 'common/header-lower';
 @use 'common/lower-banner';
+@use 'common/footer-lower';
 @use 'components/hero';
 @use 'components/video';
 @use 'components/features';
@@ -22,3 +24,4 @@
 @use 'components/steps';
 @use 'components/faq';
 @use 'components/contact';
+@use 'components/news';

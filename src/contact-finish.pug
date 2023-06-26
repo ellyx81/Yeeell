@@ -3,13 +3,14 @@ block variables
   - var bannerText = "お問い合わせ"
   - var bannerImage = "img/contact-page/contact-banner.png"
 block content
-  .contact 
-    .contact__form 
-      p.contact__top-instruction.contact__top-instruction--bold 弊社へのお問い合わせは以下のフォームをご利用ください。      
-      p この度は、お問い合わせいただきましてありがとうございます。#[br]
-        | お問い合わせを受け付けました。#[br] 
-        | 改めて、担当よりご連絡をさせていただきます。#[br]
-        | 今しばらくお待ちくださいますようお願い申し上げます。
-      button(type="button" name="back").contact__btn トップへ戻る
+  main
+    section.contact 
+      .contact__form 
+        p.contact__top-instruction.contact__top-instruction--bold 弊社へのお問い合わせは以下のフォームをご利用ください。      
+        p この度は、お問い合わせいただきましてありがとうございます。#[br]
+          | お問い合わせを受け付けました。#[br] 
+          | 改めて、担当よりご連絡をさせていただきます。#[br]
+          | 今しばらくお待ちくださいますようお願い申し上げます。
+        a(href="#").contact__btn トップへ戻る
 block script
   script(src="js/lower/index.ts")
