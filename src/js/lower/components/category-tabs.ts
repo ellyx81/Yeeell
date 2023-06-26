@@ -1,6 +1,6 @@
 const categoryTabs = () => {
-  const categoryList = document.querySelectorAll('.news__category');
-  const newsContainerList = document.querySelectorAll('.news__container.js-news');
+  const categoryList = document.querySelectorAll('.js-category');
+  const newsContainerList = document.querySelectorAll('.js-news');
 
   categoryList.forEach((category) => {
     category.addEventListener('click', () => {
