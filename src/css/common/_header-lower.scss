@@ -97,6 +97,7 @@
     width: 169px;
     height: 33px;
     margin-top: 10px;
+    cursor: pointer;
     @include media-query.sp {
       height: 20px;
       width: 100px;
@@ -201,6 +202,7 @@
     font-size: 20px;
     font-weight: font-weight.$bold;
     color: color.$primary-lower;
+    cursor: pointer;
     @include media-query.sp {
       font-size: 16px;
     }
@@ -224,7 +226,7 @@
 
     &:hover {
       background-color: color.$blue-green;
-      letter-spacing: .2em;
+      border: 1px solid color.$white;
     }
 
     &-text {
