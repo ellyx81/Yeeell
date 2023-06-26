@@ -108,6 +108,20 @@
   }
 }
 
+.hero__title-decoration {
+  position: relative;
+  width: function.getpc(340px);
+  height: function.getpc(40px);
+  top: function.getpc(-23px);
+  left: function.getpc(-5px);
+  background-image: url("../img/index-page/hero/title-decoration.svg");
+  background-repeat: no-repeat;
+  @include media-query.sp {
+    top: function.getpc(-15px);
+    width: 140px;
+  }
+}
+
 .hero__description {
   max-width: function.getpc(450px);
   font-size: function.getpc(28px);

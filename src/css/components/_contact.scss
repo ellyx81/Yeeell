@@ -1,0 +1,302 @@
+@use 'tools/function' as function;
+@use 'tools/mixin' as mixin;
+@use 'tools/media-queries' as media-query;
+@use 'settings/font-family' as font-family;
+@use 'settings/font-weight' as font-weight;
+@use 'settings/color' as color;
+
+.contact {
+  width: 100%;
+  max-width: 980px;
+  margin: auto;
+  font-family: font-family.$yugo;
+  color: color.$text-lower;
+  @include media-query.mx980 {
+    width: 90%;
+  }
+}
+
+.contact__form {
+  @include mixin.center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  font-weight: font-weight.$medium;
+  font-size: 18px;
+  line-height: function.getem(18, 30);
+  @include media-query.sp {
+    font-size: 12px;
+    gap: 20px;
+  }
+}
+
+.contact__top-instruction {
+  padding-top: 40px;
+  align-self: flex-start;
+  @include media-query.sp {
+    padding-top: 25px;
+  }
+
+  &--bold {
+    font-weight: font-weight.$bold;
+  }
+}
+
+.contact__terms {
+  background-color: color.$light-gray-lower;
+  @include mixin.center;
+  flex-direction: column;
+  padding: 0 32px;
+  @include media-query.sp {
+    padding: 0 20px;
+  }
+
+  &-title {
+    font-size: 18px;
+    font-weight: font-weight.$bold;
+    margin-top: 25px;
+    @include media-query.sp {
+      font-size: 12px;
+      margin-top: 18px;
+    }
+  }
+
+  &-instruction {
+    font-weight: font-weight.$medium;
+    font-size: 18px;
+    line-height: function.getem(18, 30);
+    align-self: flex-start;
+    margin: 15px 0 9px;
+    @include media-query.sp {
+      font-size: 12px;
+    }
+  }
+
+  &-scroll {
+    background-color: color.$white;
+    border: 1px solid color.$gray;
+    padding: 13px;
+    height: 200px;
+  }
+
+  &-paragraph {
+    font-size: 16px;
+    font-weight: font-weight.$medium;
+    line-height: function.getem(16, 28);
+    height: 98%;
+    padding: 0 1%;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar-track {
+      background-color: color.$white;
+    }
+
+    &::-webkit-scrollbar {
+      width: 7px;
+      background-color: color.$gray;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: color.$gray;
+    }
+    @include media-query.sp {
+      font-size: 12px;
+    }
+  }
+
+  &-check {
+    @include mixin.center;
+    margin: 18px 0;
+    @include media-query.sp {
+      margin: 12px 0;
+    }
+
+    &-box {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      @include media-query.sp {
+        width: 15px;
+        height: 15px;
+      } 
+    }
+
+    &-label {
+      font-size: 18px;
+      font-weight: font-weight.$medium;
+      margin: 0 12px;
+      @include media-query.sp {
+        font-size: 12px;
+        margin: 0 8px;
+      }
+    }
+  }
+}
+
+.contact__input {
+  width: 100%;
+  margin-top: 10px;
+  @include mixin.center;
+  justify-content: flex-start;
+  gap: 22px;
+  @include media-query.sp {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 5px;
+  }
+
+  &--inquiry {
+    align-items: flex-start;
+
+    .contact__input-label,
+    .contact__input-required-label {
+      margin-top: 10px;
+    }
+  }
+
+  &-label {
+    @include mixin.center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 250px;
+
+    &-text {
+      font-size: 16px;
+      font-weight: font-weight.$bold;
+      width: 100%;
+      max-width: 166px;
+      @include media-query.sp {
+        font-size: 12px;
+        width: auto;
+      }
+    }
+
+    &-required {
+      color: color.$text-lower;
+      font-size: 14px;
+      font-weight: font-weight.$medium;
+      background-color: color.$yellow-lower;
+      height: 30px;
+      padding: 0 10px;
+      margin: 0 18px;
+      border-radius: 4px;
+      @include media-query.sp {
+        font-size: 10px;
+        width: 100%;
+        max-width: 40px;
+        height: 20px;
+        margin: 0 5px;
+      }
+    
+      &::before {
+        content: "必須";
+      }
+  
+      &--not-required {
+        background-color: color.$gray-lower;
+  
+        &::before {
+          content: "任意";
+        }
+      }
+    }
+  }
+
+  &-box-wrap {
+    @include mixin.center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 20px;
+    @include media-query.sp {
+      gap: 10px;
+    }
+  }
+
+  &-box {
+    width: 100%;
+    height: 50px;
+    cursor: auto;
+    border: 1px solid color.$dark-gray-lower;
+    border-radius: 4px;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: font-weight.$medium;
+    @include media-query.sp {
+      height: 40px;
+      font-size: 12px;
+      padding: 8px;
+    }
+
+    &--select,
+    &--tel {
+      max-width: 240px;
+      @include media-query.sp {
+        max-width: 100%;
+      }
+    }
+    
+    &--select {
+      cursor: pointer;
+      background: url("../img/icons/dropdown-icon.svg");
+      background-position-x: 92%;
+      background-position-y: 50%;
+      background-repeat: no-repeat;
+      background-size: 8px 10px;
+      @include media-query.sp {
+        background-position-x: 98%;
+      }
+    }
+
+    &--textarea {
+      height: 160px;
+    }
+  }
+}
+
+.contact__btn-wrapper {
+  @include mixin.center;
+  width: 100%;
+  gap: 40px;
+  @include media-query.sp {
+    gap: 10px;
+  }
+}
+
+.contact__btn {
+  width: 100%;
+  align-self: center;
+  max-width: 340px;
+  height: 60px;
+  color: color.$white;
+  background-color: color.$primary-lower;
+  font-size: 26px;
+  font-weight: font-weight.$bold;
+  border: none;
+  @include mixin.center;
+  margin-top: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background .5s ease;
+  @include media-query.sp {
+    max-width: 100%;
+    height: 40px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  &:hover {
+    background-color: color.$blue-green;
+  }
+
+  &--white {
+    background-color: color.$white;
+    color: color.$text-lower;
+    border: 1px solid color.$gray-lower;
+
+    &:hover {
+      border: none;
+      color: color.$white;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+extends includes/layout.pug
+block variables
+  - var bannerText = "お問い合わせ"
+  - var bannerImage = "img/contact-page/contact-banner.png"
+block content
+  main
+    section.contact 
+      form(action="" name="contact-form").contact__form 
+        p.contact__top-instruction.contact__top-instruction--bold 弊社へのお問い合わせは以下のフォームをご利用ください。
+        .contact__input 
+          .contact__input-label
+            label.contact__input-label-text お名前
+            .contact__input-label-required
+          .contact__input-box-wrap
+            span 姓
+            span 名
+        .contact__input 
+          .contact__input-label
+            label.contact__input-label-text お名前（フリガナ）
+            .contact__input-label-required
+          .contact__input-box-wrap
+            span セイ
+            span メイ
+        .contact__input 
+          .contact__input-label
+            label.contact__input-label-text 所在地
+            .contact__input-label-required
+          span 東京都
+        .contact__input 
+          .contact__input-label
+            label.contact__input-label-text 会社名・団体名
+            .contact__input-label-required.contact__input-label-required--not-required
+          span 株式会社〇〇
+        .contact__input 
+          .contact__input-label
+            label.contact__input-label-text 部署
+            .contact__input-label-required.contact__input-label-required--not-required
+          span 〇〇部
+        .contact__input 
+          .contact__input-label
+            label.contact__input-label-text 役職
+            .contact__input-label-required.contact__input-label-required--not-required
+          span 〇長
+        .contact__input 
+          .contact__input-label
+            label.contact__input-label-text メールアドレス
+            .contact__input-label-required
+          span example@xxxxxx.cp.jp
+        .contact__input 
+          .contact__input-label
+            label.contact__input-label-text 電話番号
+            .contact__input-label-required
+          span 012-3456-7890
+        .contact__input.contact__input--inquiry
+          .contact__input-label
+            label.contact__input-label-text お問い合わせ内容
+            .contact__input-label-required
+          p これはダミー文です。お問い合わせ内容が入ります。これはダミー文です。お問い合わせ内容が入ります。これはダミー文です。お問い合わせ内容が入ります。これはダミー文です。お問い合わせ内容が入ります。これはダミー文です。お問い合わせ内容が入ります。
+        .contact__btn-wrapper
+          button(type="button" name="back").contact__btn.contact__btn--white 戻る
+          button(type="submit" name="submit").contact__btn 送信する
+block script
+  script(src="js/lower/index.ts")
