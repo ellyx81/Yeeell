@@ -7,26 +7,20 @@ const toggler = () => {
 
     if (toggle) {
       toggle.addEventListener("click", () => {
-        
+        header.classList.toggle("is-active");
         if (header.classList.contains("is-active")) {
-          header.classList.remove("is-active");
-          html.style.overflowY = 'visible';
+          html.style.overflowY = "hidden";
         } else {
-          header.classList.add("is-active");
-          html.style.overflowY = 'hidden';
+          html.style.overflowY = "visible";
         }
       });
-      
+
       header.addEventListener("mouseleave", () => {
         header.classList.remove("is-active");
-        html.style.overflowY = 'visible';
+        html.style.overflowY = "visible";
       });
     }
   }
-  
-}
+};
 
-export default toggler
-  
-  
-  
+export default toggler;
