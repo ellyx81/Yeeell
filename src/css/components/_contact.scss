@@ -6,11 +6,11 @@
 @use 'settings/color' as color;
 
 .contact {
+  width: 100%;
   max-width: 980px;
   margin: auto;
   font-family: font-family.$yugo;
   color: color.$text-lower;
-  padding-bottom: 230px;
   @include media-query.mx980 {
     width: 90%;
   }
@@ -75,19 +75,30 @@
   &-scroll {
     background-color: color.$white;
     border: 1px solid color.$gray;
-    padding: 13px 20px;
+    padding: 13px;
     height: 200px;
-    overflow-y: scroll;
-    @include media-query.sp {
-      padding: 13px 15px;
-      height: 150px;
-    }
   }
 
   &-paragraph {
     font-size: 16px;
     font-weight: font-weight.$medium;
     line-height: function.getem(16, 28);
+    height: 98%;
+    padding: 0 1%;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar-track {
+      background-color: color.$white;
+    }
+
+    &::-webkit-scrollbar {
+      width: 7px;
+      background-color: color.$gray;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: color.$gray;
+    }
     @include media-query.sp {
       font-size: 12px;
     }
@@ -262,9 +273,11 @@
   font-size: 26px;
   font-weight: font-weight.$bold;
   border: none;
+  @include mixin.center;
   margin-top: 20px;
   border-radius: 4px;
   cursor: pointer;
+  transition: background .5s ease;
   @include media-query.sp {
     max-width: 100%;
     height: 40px;
@@ -273,7 +286,7 @@
   }
 
   &:hover {
-    background-color: color.$text-lower;
+    background-color: color.$blue-green;
   }
 
   &--white {
@@ -282,8 +295,8 @@
     border: 1px solid color.$gray-lower;
 
     &:hover {
-      border: 2px solid color.$text;
-      background-color: color.$white;
+      border: none;
+      color: color.$white;
     }
   }
 }

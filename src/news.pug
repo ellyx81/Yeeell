@@ -1,6 +1,101 @@
 extends includes/layout.pug
+include includes/mixin.pug
 block variables
   - var bannerText = "お知らせ"
   - var bannerImage = "img/news-page/news-banner.png"
+block content
+  main
+    section.news
+      .news__categories
+        .news__category.js-category.is-active(data-target="new") 新着
+        .news__category.js-category(data-target="notice") お知らせ
+        .news__category.js-category(data-target="award") 受賞
+        .news__category.js-category(data-target="event") イベント
+        .news__category.js-category(data-target="publication") メディア掲載
+        .news__category.js-category(data-target="abroad") 海外
+      .news__container.js-news.active#new
+        +news("お知らせ", "img/news-page/news-1.png", "2019年02月01日", "サイディングプレカット新工場の落成に伴い、式典を行いました！")
+        +news("受賞", "img/news-page/news-2.png", "2019年02月01日", "東北地方のブロック紙「河北新報」に弊社で外壁工事の施行を請け負 ました入浴施設")
+        +news("イベント", "img/news-page/news-3.png", "2019年02月01日", "社長の誕生日を花束でお祝いいたしました！")
+        +news("メディア掲載", "img/news-page/news-4.png", "2019年02月01日", "サイディングプレカット新工場の落成に伴い、式典を行いました！")
+        +news("海外", "img/news-page/news-5.png", "2019年02月01日", "東北地方のブロック紙「河北新報」に弊社で外壁工事の施行を請け負...ました入浴施設")
+        +news("お知らせ", "img/news-page/news-6.png", "2019年02月01日", "「日刊木材新聞」に弊社のサイディングプレカット工場および木造倉庫建...築事業について掲載されました！")
+        +news("お知らせ", "img/news-page/news-7.png", "2019年02月01日", "インドネシア（ソロ）にて、新規技能実習生の面接を行いました！")
+        +news("お知らせ", "img/news-page/news-8.png", "2019年02月01日", "サイディングプレカット新工場の落成に伴い、式典を行いました！")
+        +news("お知らせ", "img/news-page/news-1.png", "2019年02月01日", "サイディングプレカット新工場の落成に伴い、式典を行いました！")
+        +news("受賞", "img/news-page/news-2.png", "2019年02月01日", "東北地方のブロック紙「河北新報」に弊社で外壁工事の施行を請け負 ました入浴施設")
+        +news("イベント", "img/news-page/news-3.png", "2019年02月01日", "社長の誕生日を花束でお祝いいたしました！")
+        +news("メディア掲載", "img/news-page/news-4.png", "2019年02月01日", "サイディングプレカット新工場の落成に伴い、式典を行いました！")
+        +news("海外", "img/news-page/news-5.png", "2019年02月01日", "東北地方のブロック紙「河北新報」に弊社で外壁工事の施行を請け負...ました入浴施設")
+        +news("お知らせ", "img/news-page/news-6.png", "2019年02月01日", "「日刊木材新聞」に弊社のサイディングプレカット工場および木造倉庫建...築事業について掲載されました！")
+        +news("お知らせ", "img/news-page/news-7.png", "2019年02月01日", "インドネシア（ソロ）にて、新規技能実習生の面接を行いました！")
+        +news("お知らせ", "img/news-page/news-8.png", "2019年02月01日", "サイディングプレカット新工場の落成に伴い、式典を行いました！")
+      .news__container.js-news#notice
+        +news("お知らせ", "img/news-page/news-1.png", "2019年02月01日", "サイディングプレカット新工場の落成に伴い、式典を行いました！")
+        +news("お知らせ", "img/news-page/news-6.png", "2019年02月01日", "「日刊木材新聞」に弊社のサイディングプレカット工場および木造倉庫建...築事業について掲載されました！")
+        +news("お知らせ", "img/news-page/news-7.png", "2019年02月01日", "インドネシア（ソロ）にて、新規技能実習生の面接を行いました！")
+        +news("お知らせ", "img/news-page/news-8.png", "2019年02月01日", "サイディングプレカット新工場の落成に伴い、式典を行いました！")
+        +news("お知らせ", "img/news-page/news-1.png", "2019年02月01日", "サイディングプレカット新工場の落成に伴い、式典を行いました！")
+        +news("お知らせ", "img/news-page/news-6.png", "2019年02月01日", "「日刊木材新聞」に弊社のサイディングプレカット工場および木造倉庫建...築事業について掲載されました！")
+        +news("お知らせ", "img/news-page/news-7.png", "2019年02月01日", "インドネシア（ソロ）にて、新規技能実習生の面接を行いました！")
+        +news("お知らせ", "img/news-page/news-8.png", "2019年02月01日", "サイディングプレカット新工場の落成に伴い、式典を行いました！")
+      .news__container.js-news#award
+        +news("受賞", "img/news-page/news-2.png", "2019年02月01日", "東北地方のブロック紙「河北新報」に弊社で外壁工事の施行を請け負 ました入浴施設")
+        +news("受賞", "img/news-page/news-2.png", "2019年02月01日", "東北地方のブロック紙「河北新報」に弊社で外壁工事の施行を請け負 ました入浴施設")
+        +news("受賞", "img/news-page/news-2.png", "2019年02月01日", "東北地方のブロック紙「河北新報」に弊社で外壁工事の施行を請け負 ました入浴施設")
+      .news__container.js-news#event
+        +news("イベント", "img/news-page/news-3.png", "2019年02月01日", "社長の誕生日を花束でお祝いいたしました！")
+        +news("イベント", "img/news-page/news-3.png", "2019年02月01日", "社長の誕生日を花束でお祝いいたしました！")
+      .news__container.js-news#publication
+        +news("メディア掲載", "img/news-page/news-4.png", "2019年02月01日", "サイディングプレカット新工場の落成に伴い、式典を行いました！")
+        +news("メディア掲載", "img/news-page/news-4.png", "2019年02月01日", "サイディングプレカット新工場の落成に伴い、式典を行いました！")
+      .news__container.js-news#abroad
+        +news("海外", "img/news-page/news-5.png", "2019年02月01日", "東北地方のブロック紙「河北新報」に弊社で外壁工事の施行を請け負...ました入浴施設")
+        +news("海外", "img/news-page/news-5.png", "2019年02月01日", "東北地方のブロック紙「河北新報」に弊社で外壁工事の施行を請け負...ました入浴施設")
+      .wp-pagenavi
+        a(href="#")
+        span.current
+          .first.page 1
+        a(href="#").page 2
+        a(href="#").page 3
+        a(href="#").page 4
+        a(href="#").page 5
+        a(href="#").last.page 6
+        a(href="#") 
+      .news__inquiry 
+        h3.news__heading.wow.animate__animated.animate__fadeInDown お問い合わせ
+        h4.news__inquiry-subheading.wow.animate__animated.animate__fadeInDown.animate__slow 無料相談お受けします。お気軽にお問い合わせ下さい！
+        .news__inquiry-box
+          .news__inquiry-phone
+            img(src="img/icons/phone-icon.svg", alt="").news__inquiry-icon
+            span.news__inquiry-text 電話でのお問い合わせ
+            a(href="tel:03-3896-1711").news__inquiry-phone-number 
+              span TEL.
+              | 03-3896-1711
+              span (代)
+            .news__inquiry-phone-hours 受付時間／9:00〜18:00（月〜金）
+          .news__inquiry-email
+            img(src="img/icons/list-icon.svg", alt="").news__inquiry-icon
+            span.news__inquiry-text 電話でのお問い合わせ
+            button.news__inquiry-email-btn
+              span お問い合わせフォーム
+      .news__sites
+        h3.news__heading.wow.animate__animated.animate__fadeInDown 関連サイト
+        .news__sites-container
+          a(href="#")
+            img(src="img/logos/NYG-logo.png", alt="").news__sites-item
+          a(href="#")
+            img(src="img/logos/FC-logo.png", alt="").news__sites-item
+          a(href="#")
+            img(src="img/logos/RWTA-logo.png", alt="").news__sites-item
+          a(href="#")
+            img(src="img/logos/NTT-Smile-logo.png", alt="").news__sites-item
+          a(href="#")
+            img(src="img/logos/Fun-to-share-logo.png", alt="").news__sites-item
+
+
 block script
   script(src="js/lower/index.ts")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js")
+  script.
+    new WOW().init();

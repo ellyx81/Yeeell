@@ -78,3 +78,11 @@ mixin faq(questionNum, questionTitle, answer)
     .faq__answer.js-answer
       span.faq__answer-label A
       p.faq__answer-text!= answer
+
+mixin news(category, image, date, headline)
+  .news__item
+    span.news__item-category= category
+    .news__item-image
+      img(src= image, alt="")
+    span.news__item-date= date
+    p.news__item-headline= headline
