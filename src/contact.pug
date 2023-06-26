@@ -3,78 +3,79 @@ block variables
   - var bannerText = "お問い合わせ"
   - var bannerImage = "img/contact-page/contact-banner.png"
 block content
-  .contact 
-    form(action="" name="contact-form").contact__form 
-      p.contact__top-instruction 弊社へのお問い合わせは以下のフォームをご利用ください。
-      .contact__terms
-        h2.contact__terms-title 個人情報のお取り扱いについて
-        p.contact__terms-instruction 以下の個人情報の取り扱いに関する事項についてご確認いただき、#[br]
-          | 同意いただける方は「同意する」を選択して進んで下さい。
-        .contact__terms-scroll
-          p.contact__terms-paragraph これはダミー文字です(以下、「当社」といいます)は、建築に関するコンサルティング業務・ソフトウェアの開発及び販売業務を遂行する上で、お客様の個人情報がプライバシーを構成する重要な情報であることを深く認識し、業務において個人情報を取り扱う場合には、個人情報に関する法令及び個人情報保護のために定めた社内規定を定め、また、組織体制を整備し、個人情報の適切な保護に努めることにより、お客様を尊重し、当社に対する期待と信頼に応えていきます。#[br]
-            | #[br]
-            | 個人情報保護に関する法令・規範の遵守 #[br]
-            | #[br]
-            | 作かンきへ龍無ムエハラ変71領うトねぱ玄界ロ心表概オヤモム図画ナフ百掲ヒルヱミ禁和ふ境夫フオレ任権イヒア本善へ配響月91底肉場はち。雇よッ応彦ヤシ打車シスウ著尚便ヘリ聞図けそト老示れラ容米要歳えぽレ送放フょ木子ソ病刺掘顧由ぽびくづ。偉8葉タト購6動ホニソ下著りま見手るけ上供びやさへ引国し選妻ノニ続度ネフマ雪需ドめくク砂学通侍ぽ。 #[br]
-            | #[br]
-            | 銀71紙ヤカユエ分事ラヲウエ通要け健読らょ登後重ハキ人会トそ探養ゃ金木きン女地ワノ真渡られむ教1獲残ワチタ聞対モ話菜そさ街線ばょ様派北リル。間ひぼトや医意投ユルリア場客会ね少薦つトべ明9団レテルセ場著スヲイニ氏業謙接キミ参多きーこく掲北タフ向2落サケ室3村ぽなむル維安アムリレ均待頼ッれるす。 #[br]
-        .contact__terms-check
-          input(type="checkbox" name="terms").contact__terms-check-box
-          label.contact__terms-check-label 同意する
-      .contact__input 
-        .contact__input-label
-          label.contact__input-label-text お名前
-          .contact__input-label-required
-        .contact__input-box-wrap
-          input(type="text" name="lname" placeholder="姓" required).contact__input-box
-          input(type="text" name="fname" placeholder="名" required).contact__input-box
-      .contact__input 
-        .contact__input-label
-          label.contact__input-label-text お名前（フリガナ）
-          .contact__input-label-required
-        .contact__input-box-wrap
-          input(type="text" name="lname" placeholder="セイ" required).contact__input-box
-          input(type="text" name="fname" placeholder="メイ" required).contact__input-box
-      .contact__input 
-        .contact__input-label
-          label.contact__input-label-text 所在地
-          .contact__input-label-required
-        select(id="location" name="location" required).contact__input-box.contact__input-box--select
-          option(disabled='', selected='', value='').contact__input-option
-          option(value="option 1").contact__input-option オプション1
-          option(value="option 2").contact__input-option オプション2
-          option(value="option 3").contact__input-option オプション3
-      .contact__input 
-        .contact__input-label
-          label.contact__input-label-text 会社名・団体名
-          .contact__input-label-required.contact__input-label-required--not-required
-        input(type="text" name="org").contact__input-box
-      .contact__input 
-        .contact__input-label
-          label.contact__input-label-text 部署
-          .contact__input-label-required.contact__input-label-required--not-required
-        input(type="text" name="dept").contact__input-box
-      .contact__input 
-        .contact__input-label
-          label.contact__input-label-text 役職
-          .contact__input-label-required.contact__input-label-required--not-required
-        input(type="text" name="director").contact__input-box
-      .contact__input 
-        .contact__input-label
-          label.contact__input-label-text メールアドレス
-          .contact__input-label-required
-        input(type="email" name="email" required).contact__input-box
-      .contact__input
-        .contact__input-label 
-          label.contact__input-label-text 電話番号
-          .contact__input-label-required
-        input(type="tel" name="tel" required).contact__input-box.contact__input-box--tel
-      .contact__input.contact__input--inquiry
-        .contact__input-label
-          label.contact__input-label-text お問い合わせ内容
-          .contact__input-label-required
-        textarea(name="inquiry" required).contact__input-box.contact__input-box--textarea
-      button(type="button" name="proceed").contact__btn 確認画面に進む
+  main
+    section.contact  
+      form(action="" name="contact-form").contact__form 
+        p.contact__top-instruction 弊社へのお問い合わせは以下のフォームをご利用ください。
+        .contact__terms
+          h2.contact__terms-title 個人情報のお取り扱いについて
+          p.contact__terms-instruction 以下の個人情報の取り扱いに関する事項についてご確認いただき、#[br]
+            | 同意いただける方は「同意する」を選択して進んで下さい。
+          .contact__terms-scroll
+            p.contact__terms-paragraph これはダミー文字です(以下、「当社」といいます)は、建築に関するコンサルティング業務・ソフトウェアの開発及び販売業務を遂行する上で、お客様の個人情報がプライバシーを構成する重要な情報であることを深く認識し、業務において個人情報を取り扱う場合には、個人情報に関する法令及び個人情報保護のために定めた社内規定を定め、また、組織体制を整備し、個人情報の適切な保護に努めることにより、お客様を尊重し、当社に対する期待と信頼に応えていきます。#[br]
+              | #[br]
+              | 個人情報保護に関する法令・規範の遵守 #[br]
+              | #[br]
+              | 作かンきへ龍無ムエハラ変71領うトねぱ玄界ロ心表概オヤモム図画ナフ百掲ヒルヱミ禁和ふ境夫フオレ任権イヒア本善へ配響月91底肉場はち。雇よッ応彦ヤシ打車シスウ著尚便ヘリ聞図けそト老示れラ容米要歳えぽレ送放フょ木子ソ病刺掘顧由ぽびくづ。偉8葉タト購6動ホニソ下著りま見手るけ上供びやさへ引国し選妻ノニ続度ネフマ雪需ドめくク砂学通侍ぽ。 #[br]
+              | #[br]
+              | 銀71紙ヤカユエ分事ラヲウエ通要け健読らょ登後重ハキ人会トそ探養ゃ金木きン女地ワノ真渡られむ教1獲残ワチタ聞対モ話菜そさ街線ばょ様派北リル。間ひぼトや医意投ユルリア場客会ね少薦つトべ明9団レテルセ場著スヲイニ氏業謙接キミ参多きーこく掲北タフ向2落サケ室3村ぽなむル維安アムリレ均待頼ッれるす。 #[br]
+          .contact__terms-check
+            input(type="checkbox" name="terms").contact__terms-check-box
+            label.contact__terms-check-label 同意する
+        .contact__input 
+          .contact__input-label
+            label.contact__input-label-text お名前
+            .contact__input-label-required
+          .contact__input-box-wrap
+            input(type="text" name="lname" placeholder="姓" required).contact__input-box
+            input(type="text" name="fname" placeholder="名" required).contact__input-box
+        .contact__input 
+          .contact__input-label
+            label.contact__input-label-text お名前（フリガナ）
+            .contact__input-label-required
+          .contact__input-box-wrap
+            input(type="text" name="lname" placeholder="セイ" required).contact__input-box
+            input(type="text" name="fname" placeholder="メイ" required).contact__input-box
+        .contact__input 
+          .contact__input-label
+            label.contact__input-label-text 所在地
+            .contact__input-label-required
+          select(id="location" name="location" required).contact__input-box.contact__input-box--select
+            option(disabled='', selected='', value='').contact__input-option
+            option(value="option 1").contact__input-option オプション1
+            option(value="option 2").contact__input-option オプション2
+            option(value="option 3").contact__input-option オプション3
+        .contact__input 
+          .contact__input-label
+            label.contact__input-label-text 会社名・団体名
+            .contact__input-label-required.contact__input-label-required--not-required
+          input(type="text" name="org").contact__input-box
+        .contact__input 
+          .contact__input-label
+            label.contact__input-label-text 部署
+            .contact__input-label-required.contact__input-label-required--not-required
+          input(type="text" name="dept").contact__input-box
+        .contact__input 
+          .contact__input-label
+            label.contact__input-label-text 役職
+            .contact__input-label-required.contact__input-label-required--not-required
+          input(type="text" name="director").contact__input-box
+        .contact__input 
+          .contact__input-label
+            label.contact__input-label-text メールアドレス
+            .contact__input-label-required
+          input(type="email" name="email" required).contact__input-box
+        .contact__input
+          .contact__input-label 
+            label.contact__input-label-text 電話番号
+            .contact__input-label-required
+          input(type="tel" name="tel" required).contact__input-box.contact__input-box--tel
+        .contact__input.contact__input--inquiry
+          .contact__input-label
+            label.contact__input-label-text お問い合わせ内容
+            .contact__input-label-required
+          textarea(name="inquiry" required).contact__input-box.contact__input-box--textarea
+        button(type="button" name="proceed").contact__btn 確認画面に進む
 block script
   script(src="js/lower/index.ts")
 
