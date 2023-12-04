@@ -1,19 +1,119 @@
 @use 'settings/color' as color;
 @use 'settings/font-family' as font-family;
+@use 'tools/media-queries' as media-query;
+
+// input,
+// option,
+// select,
+// textarea {
+//   color: color.$text-lower;
+//   font-family: font-family.$yugo;
+// }
+
+// select {
+//   appearance: none;
+// }
+
+// ::placeholder {
+//   font-family: font-family.$yugo;
+//   color: color.$dark-gray-lower;
+// }
 
 input,
-option,
-select,
+textarea,
+button {
+  border: none;
+  width: 100%;
+  font: inherit;
+  line-height: inherit;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: color.$medium-gray;
+  }
+}
+
+input {
+  background-color: color.$light-gray;
+  padding: 1.4em 2em;
+  @include media-query.sp  {
+    padding: 0.6em 1em;
+  }
+
+  &[type = checkbox] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+  
+    &::after {
+      content: '';
+      position: relative;
+      display: inline-block;
+      width: 23px;
+      height: 23px;
+      top: 0;
+      left: 0;
+      border: solid color.$black;
+      border-width: 1px;
+      background-color: color.$white;
+    }
+  
+    &:checked {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 0;
+      width: 0;
+  
+      &::before {
+        content: '';
+        position: relative;
+        display: inline-block;
+        width: 23px;
+        height: 23px;
+        top: 0;
+        left: 0;
+        border: solid color.$black;
+        border-width: 1px;
+        background-color: color.$white;
+      }
+  
+      &::after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 13px;
+        height: 7px;
+        border-width: 0px 0px 2px 2px;
+        transform: rotate(-45deg);
+        background-color: color.$white;
+      }
+    }
+  }  
+}
+
 textarea {
-  color: color.$text-lower;
-  font-family: font-family.$yugo;
+  background: transparent;
+  resize: vertical;
 }
 
-select {
-  appearance: none;
-}
-
-::placeholder {
-  font-family: font-family.$yugo;
-  color: color.$dark-gray-lower;
+button {
+  display: block;
+  width: 144px;
+  height: 50px;
+  color: color.$white;
+  background-color: color.$darkest-gray;
+  border-radius: 28px;
+  cursor: pointer;
+  @include media-query.sp {
+    width: 120px;
+    height: 44px;
+    border-radius: 22px;
+  }
 }

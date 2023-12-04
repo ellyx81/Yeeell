@@ -1,9 +1,12 @@
 @use 'settings/font-weight' as font-weight;
+@use 'settings/color' as color;
 @use 'tools/mixin' as mixin;
 @use 'tools/function' as function;
 @use 'tools/media-queries' as media-query;
 
 .header {
+  $p: &;
+
   @include mixin.center;
   justify-content: flex-start;
   padding: function.getpc(32px);
@@ -12,10 +15,43 @@
   @include media-query.sp {
     padding: 10px;
   }
+
+  &--lower {
+    padding: 24px 60px;
+    position: relative;
+    margin: 0 auto;
+    max-width: 1280px;
+    @include media-query.sp {
+      padding: 14px 20px;
+    }
+
+    #{$p}__logo {
+      position: relative;
+      width: 152px;
+      @include media-query.sp {
+        width: 120px;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 40px;
+      width: 430px;
+      height: 90px;
+      background-color: color.$primary;
+      @include media-query.sp {
+        width: 100%;
+        height: 60px;
+        left: 0;
+      }
+    }
+  }
 }
 
 .header__logo {
-  height: function.getpc(80px);
+  height: function.getpc(60px);
   cursor: pointer;
   @include media-query.mx980 {
     height: 48px;
