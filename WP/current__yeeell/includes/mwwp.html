@@ -1,0 +1,60 @@
+<div class="contact__input" action name="contact-form">
+  <label class="contact__label">ご用件</label>
+  <div class="contact__input-wrap">
+    [mwform_checkbox name="business" children="クリエイターへの広告出稿について,SNSプロモーション全般について,その他" vertically="true" separator=","]
+  </div>
+</div>
+<div class="contact__input contact__input--not-required">
+  <label class="contact__label">会社名</label>
+  <div class="contact__input-wrap">
+    [mwform_text name="company" size="60"]
+  </div>
+</div>
+<div class="contact__input"> 
+  <label class="contact__label">氏名</label>
+  <div class="contact__input-wrap">
+    [mwform_text name="name" size="60"]
+  </div>
+</div>
+<div class="contact__input"> 
+  <label class="contact__label">氏名(ふりがな)</label>
+  <div class="contact__input-wrap">
+    [mwform_text name="name-f" size="60"]
+  </div>
+</div>
+<div class="contact__input contact__input--not-required">
+  <label class="contact__label">電話番号（半角）</label>
+  <div class="contact__input-wrap contact__input-wrap--tel">
+    [mwform_number name="tel-1" step="1"]
+    [mwform_number name="tel-2" step="1"]
+    [mwform_number name="tel-3" step="1"]
+  </div>
+</div>
+<div class="contact__input"> 
+  <label class="contact__label">メールアドレス</label>
+  <div class="contact__input-wrap">
+    [mwform_email name="email" size="60"]
+  </div>
+</div>
+<div class="contact__input"> 
+  <label class="contact__label">確認用メールアドレス</label>
+  <div class="contact__input-wrap">
+    [mwform_email name="email-confirm" size="60"]
+  </div>
+</div>
+<div class="contact__input">
+  <label class="contact__label">お問い合わせ内容</label>
+  <div class="contact__input-wrap contact__input-wrap--textarea">
+    [mwform_textarea name="inquiry" cols="50" rows="8" placeholder="商品やクリエイター名など、お問い合わせについてできるだけ詳しくご記入ください。"]
+  </div>
+</div>
+<div class="contact__input-wrap">
+    [mwform_checkbox name="agree" class="required" children="個人情報の取り扱いについて同意する" separator=","]
+</div>
+<div class="contact__btn-container">
+  [mwform_bconfirm class="contact__btn" value="confirm"]確認画面に進む[/mwform_bconfirm]
+</div>
+<div class="contact__btn-container">
+  [mwform_bback class="contact__btn contact__btn--white" value="back"]戻る[/mwform_bback]
+[mwform_bsubmit name="submit" class="contact__btn" value="send"]送信する[/mwform_bsubmit]
+</div>
