@@ -95,18 +95,14 @@ input {
         background-color: color.$white;
       }
     }
-  }  
-}
-
-textarea {
-  background: transparent;
-  resize: vertical;
+  }
 }
 
 button {
   display: block;
   width: 144px;
   height: 50px;
+  padding: 0;
   color: color.$white;
   background-color: color.$darkest-gray;
   border-radius: 28px;
@@ -116,4 +112,9 @@ button {
     height: 44px;
     border-radius: 22px;
   }
+}
+
+textarea {
+  background: transparent;
+  resize: vertical;
 }

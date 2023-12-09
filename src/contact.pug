@@ -15,15 +15,18 @@ block content
             .contact__input
               label.contact__label ご用件
               .contact__input-wrap
-                label.contact__checklist-wrap 
-                  input(type="checkbox" name="advertising" value="advertising")
-                  span クリエイターへの広告出稿について
-                label.contact__checklist-wrap
-                  input(type="checkbox" name="sns" value="sns")
-                  span SNSプロモーション全般について
-                label.contact__checklist-wrap 
-                  input(type="checkbox" name="others" value="others")
-                  span その他
+                span.mwform-checkbox-field.horizontal-item
+                  label
+                    input(type="checkbox" name="advertising" value="クリエイターへの広告出稿について")
+                    span.mwform-checkbox-field-text クリエイターへの広告出稿について
+                span.mwform-checkbox-field.horizontal-item
+                  label
+                    input(type="checkbox" name="sns" value="SNSプロモーション全般について")
+                    span.mwform-checkbox-field-text SNSプロモーション全般について
+                span.mwform-checkbox-field.horizontal-item
+                  label
+                    input(type="checkbox" name="others" value="その他")
+                    span.mwform-checkbox-field-text その他
 
             .contact__input.contact__input--not-required
               label.contact__label 会社名
@@ -63,9 +66,10 @@ block content
                 textarea(name="inquiry", cols="50", rows="8", placeholder="商品やクリエイター名など、お問い合わせについてできるだけ詳しくご記入ください。")
 
             .contact__input
-              label.contact__checklist-wrap 
-                input(type="checkbox" name="agree" value="agree")
-                span.contact__label 個人情報の取り扱いについて同意する
+              span.mwform-checkbox-field.horizontal-item
+                label
+                  input.required(type="checkbox" name="agree" value="個人情報の取り扱いについて同意する")
+                  span.mwform-checkbox-field-text 個人情報の取り扱いについて同意する
 
             .contact__btn-container
               button(type="button" name="proceed") 確認
