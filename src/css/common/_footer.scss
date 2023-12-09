@@ -4,9 +4,6 @@
 @use 'tools/mixin' as mixin;
 @use 'tools/media-queries' as media-query;
 
-.footer {
-  background-color: color.$primary;
-}
 
 .footer__border {
   margin-top: function.getpc(100px); //set white border
@@ -48,6 +45,7 @@
   flex-direction: column;
   gap: 20px;
   padding-bottom: 40px;
+  background-color: color.$primary;
   @include media-query.sp {
     gap: 10px;
     padding-bottom: 25px;
