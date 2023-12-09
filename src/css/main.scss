@@ -4,6 +4,7 @@
 @use 'trumps/splide';
 @use 'trumps/input';
 @use 'trumps/pagenavi';
+@use 'trumps/mwwp';
 @use 'common/header';
 @use 'common/footer';
 @use 'common/skew';
@@ -14,6 +15,7 @@
 @use 'common/header-lower';
 @use 'common/lower-banner';
 @use 'common/footer-lower';
+@use 'common/background';
 @use 'components/hero';
 @use 'components/video';
 @use 'components/features';

@@ -28,7 +28,7 @@ mixin call-to-action(headline, text, dialogue, btnText, dialogueSizeModifier, di
       .call-to-action__bottom-container
         .call-to-action__dialogue.wow.animate__animated.animate__bounceIn(class= dialogueSizeModifier)
           span.call-to-action__dialogue-text(class= dialogueTextModifier)!= dialogue
-        button.call-to-action__btn
+        a.call-to-action__btn(href="")
           img(src="img/icons/plane-icon-pink.svg", alt="").call-to-action__btn-icon 
           span.call-to-action__btn-text= btnText
 
@@ -40,7 +40,7 @@ mixin call-to-action(headline, text, dialogue, btnText, dialogueSizeModifier, di
       .call-to-action__bottom-container
         .call-to-action__dialogue(class= dialogueSizeModifier)
           span.call-to-action__dialogue-text(class= dialogueTextModifier)!= dialogue
-        button.call-to-action__btn
+        a.call-to-action__btn(href="")
           img(src="img/icons/plane-icon-pink.svg", alt="").call-to-action__btn-icon 
           span.call-to-action__btn-text= btnText
 

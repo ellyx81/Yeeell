@@ -3,72 +3,72 @@
 @use 'settings/color' as color;
 @use 'settings/font-weight' as font-weight;
 
-.wp-pagenavi {
-  @include mixin.center;
-  gap: 9px;
+// .wp-pagenavi {
+//   @include mixin.center;
+//   gap: 9px;
 
-  a,
-  span {
-    @include mixin.center;
-    width: 44px;
-    height: 44px;
-    border: 1px solid color.$gray-lower;
-    @include media-query.sp {
-      width: 30px;
-      height: 30px;
-    }
-  }
+//   a,
+//   span {
+//     @include mixin.center;
+//     width: 44px;
+//     height: 44px;
+//     border: 1px solid color.$gray-lower;
+//     @include media-query.sp {
+//       width: 30px;
+//       height: 30px;
+//     }
+//   }
   
-  .current {
-    background: color.$primary-lower;
-    color: color.$white;
-    border: none;
-    cursor: auto;
-  }
+//   .current {
+//     background: color.$primary-lower;
+//     color: color.$white;
+//     border: none;
+//     cursor: auto;
+//   }
   
-  .page {
-    font-size: 18px;
-    font-weight: font-weight.$medium;
-    @include media-query.sp {
-      font-size: 12px;
-    }
-  }
+//   .page {
+//     font-size: 18px;
+//     font-weight: font-weight.$medium;
+//     @include media-query.sp {
+//       font-size: 12px;
+//     }
+//   }
 
-  a {
-    cursor: pointer;
-    -webkit-transition: background .3s ease;
-    transition: background .3s ease;
+//   a {
+//     cursor: pointer;
+//     -webkit-transition: background .3s ease;
+//     transition: background .3s ease;
 
-    &:hover {
-      background-color: color.$blue-green;
-      border: none;
-      color: color.$white;
-    }
+//     &:hover {
+//       background-color: color.$blue-green;
+//       border: none;
+//       color: color.$white;
+//     }
 
-    &:first-of-type,
-    &:last-of-type { //select the previous and next arrows
-      background-position: center;
-      background-size: 22%;
-      background-repeat: no-repeat;
-      transition: transform .3s ease;
-    }
+//     &:first-of-type,
+//     &:last-of-type { //select the previous and next arrows
+//       background-position: center;
+//       background-size: 22%;
+//       background-repeat: no-repeat;
+//       transition: transform .3s ease;
+//     }
 
-    &:first-of-type {
-      background-image: url("../img/icons/left-arrow.svg");
+//     &:first-of-type {
+//       background-image: url("../img/icons/left-arrow.svg");
 
-      &:hover {
-        transform: translate(-5px);
-        background-image: url("../img/icons/left-arrow-white.svg");
-      }
-    }
+//       &:hover {
+//         transform: translate(-5px);
+//         background-image: url("../img/icons/left-arrow-white.svg");
+//       }
+//     }
 
-    &:last-of-type {
-      background-image: url("../img/icons/right-arrow.svg");
+//     &:last-of-type {
+//       background-image: url("../img/icons/right-arrow.svg");
   
-      &:hover {
-        transform: translate(5px);
-        background-image: url("../img/icons/right-arrow-white.svg");
-      }
-    }
-  }
-}
+//       &:hover {
+//         transform: translate(5px);
+//         background-image: url("../img/icons/right-arrow-white.svg");
+//       }
+//     }
+//   }
+// }
