@@ -24,7 +24,7 @@ div {
 
 @font-face {
   font-family: "Playlist Script";
-  src: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/fonts/Playlist Script.otf");
+  src: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/fonts/Playlist Script.otf");
 }
 html {
   font-family: "Noto Sans JP", sans-serif;
@@ -133,7 +133,7 @@ footer {
   border: 3px solid #fff;
 }
 .splide__arrow--prev {
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/case/slider-arrow-left.svg") !important;
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/case/slider-arrow-left.svg") !important;
   left: 33% !important;
 }
 @media screen and (max-width: 767px) {
@@ -142,7 +142,7 @@ footer {
   }
 }
 .splide__arrow--next {
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/case/slider-arrow-right.svg") !important;
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/case/slider-arrow-right.svg") !important;
   right: 33% !important;
 }
 @media screen and (max-width: 767px) {
@@ -170,7 +170,7 @@ footer {
   margin: 0 15px !important;
 }
 .splide__pagination__page.is-active {
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/case/slider-pagination-active.svg") !important;
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/case/slider-pagination-active.svg") !important;
   -webkit-transform: scale(2) !important;
           transform: scale(2) !important;
 }
@@ -357,20 +357,20 @@ textarea {
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .wp-pagenavi a:first-of-type {
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/icons/left-arrow.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/icons/left-arrow.svg");
 }
 .wp-pagenavi a:first-of-type:hover {
   -webkit-transform: translate(-5px);
           transform: translate(-5px);
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/icons/left-arrow-white.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/icons/left-arrow-white.svg");
 }
 .wp-pagenavi a:last-of-type {
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/icons/right-arrow.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/icons/right-arrow.svg");
 }
 .wp-pagenavi a:last-of-type:hover {
   -webkit-transform: translate(5px);
           transform: translate(5px);
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/icons/right-arrow-white.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/icons/right-arrow-white.svg");
 }
 
 .mwform-checkbox-field label {
@@ -534,7 +534,7 @@ textarea {
 .footer__to-top-btn-icon {
   width: 14.940625px;
   height: 14.940625px;
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/icons/to-top-icon.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/icons/to-top-icon.svg");
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -694,7 +694,7 @@ textarea {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/icons/play-icon.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/icons/play-icon.svg");
   width: 71.1458333333px;
   height: 71.1458333333px;
 }
@@ -837,7 +837,7 @@ textarea {
 }
 
 .call-to-action__dialogue {
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/cta/dialogue-bubble.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/cta/dialogue-bubble.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 181.421875px;
@@ -1446,14 +1446,14 @@ textarea {
 .hero__image {
   width: 100%;
   height: 100%;
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/hero/Hero-image.png");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/hero/Hero-image.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
 }
 @media screen and (max-width: 980px) {
   .hero__image {
-    background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/hero/Hero-image2.jpg");
+    background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/hero/Hero-image2.jpg");
     background-position: 10% 50%;
   }
 }
@@ -1550,7 +1550,7 @@ textarea {
   height: 28.4583333333px;
   top: -16.3635416667px;
   left: -3.5572916667px;
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/hero/title-decoration.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/hero/title-decoration.svg");
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 767px) {
@@ -1566,7 +1566,7 @@ textarea {
   height: 28.4583333333px;
   top: -16.3635416667px;
   left: -3.5572916667px;
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/hero/title-decoration.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/hero/title-decoration.svg");
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 767px) {
@@ -1610,7 +1610,7 @@ textarea {
 .hero__subs-decoration {
   height: 85.375px;
   width: 42.6875px;
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/hero/title-decoration2.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/hero/title-decoration2.svg");
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 767px) {
@@ -1700,7 +1700,7 @@ textarea {
   }
 }
 .hero__widget-dialogue {
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/hero/dialogue-blue.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/hero/dialogue-blue.svg");
   width: 170.75px;
   height: 71.1458333333px;
   background-repeat: no-repeat;
@@ -1761,7 +1761,7 @@ textarea {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 14.2291666667px;
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/hero/seal.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/hero/seal.svg");
   width: 170.75px;
   height: 170.75px;
   background-repeat: no-repeat;
@@ -1868,7 +1868,7 @@ textarea {
   width: 100%;
   max-width: 1597px;
   height: 100%;
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/video/video-section-background.png");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/video/video-section-background.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 40% 50%;
@@ -1955,7 +1955,7 @@ textarea {
 }
 
 .video__box {
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/video/video-decoration.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/video/video-decoration.svg");
   background-repeat: no-repeat;
   padding: 12% 11% 14% 4%;
   position: absolute;
@@ -2057,7 +2057,7 @@ textarea {
   width: 100%;
   max-width: 1597px;
   height: 95%;
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/features/features-background-image.png");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/features/features-background-image.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 58% 50%;
@@ -2133,7 +2133,7 @@ textarea {
 .features__dialogue-bubble {
   position: absolute;
   top: 16px;
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/features/dialogue-bubble1.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/features/dialogue-bubble1.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 315.8875px;
@@ -2171,7 +2171,7 @@ textarea {
   }
 }
 .features__dialogue-bubble--second {
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/features/dialogue-bubble2.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/features/dialogue-bubble2.svg");
   top: 0;
   left: 375px;
   width: 346.4802083333px;
@@ -2191,7 +2191,7 @@ textarea {
   margin: -5px 0 0 -15px;
 }
 .features__dialogue-bubble--third {
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/features/dialogue-bubble3.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/features/dialogue-bubble3.svg");
   top: auto;
   bottom: 0;
   left: 240px;
@@ -2212,7 +2212,7 @@ textarea {
   margin: -20px 0 0 0;
 }
 .features__dialogue-bubble--fourth {
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/features/dialogue-bubble4.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/features/dialogue-bubble4.svg");
   top: auto;
   right: 0;
   bottom: 18px;
@@ -2295,7 +2295,7 @@ textarea {
 .features__offer-circle {
   width: 100%;
   height: 100%;
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/features/features-circle.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/features/features-circle.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -2383,7 +2383,7 @@ textarea {
   width: 100%;
   max-width: 1597px;
   height: 104%;
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/pr-points/pr-points-section-background.png");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/pr-points/pr-points-section-background.png");
   background-size: contain;
   background-repeat: repeat-y;
   background-position: center;
@@ -2392,7 +2392,7 @@ textarea {
   .pr-points__container::before {
     top: -120px;
     height: 120%;
-    background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/pr-points/pr-points-section-background-sp.png");
+    background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/pr-points/pr-points-section-background-sp.png");
     background-position: top center;
   }
 }
@@ -2418,7 +2418,7 @@ textarea {
   }
 }
 .pr-points__title-decoration {
-  background: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/pr-points/title-decoration.svg");
+  background: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/pr-points/title-decoration.svg");
   background-repeat: no-repeat;
   width: 42.6875px;
   height: 56.9166666667px;
@@ -2618,7 +2618,7 @@ textarea {
 }
 
 .pr-points__bullet {
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/pr-points/bullet1.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/pr-points/bullet1.svg");
   width: 56.9166666667px;
   height: 56.9166666667px;
 }
@@ -2629,10 +2629,10 @@ textarea {
   }
 }
 .pr-points__bullet--second {
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/pr-points/bullet2.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/pr-points/bullet2.svg");
 }
 .pr-points__bullet--third {
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/pr-points/bullet3.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/pr-points/bullet3.svg");
 }
 
 .pr-points__heading {
@@ -2695,7 +2695,7 @@ textarea {
   width: 100%;
   max-width: 1597px;
   height: 96%;
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/case/case-section-background.png");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/case/case-section-background.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 57% 50%;
@@ -2969,7 +2969,7 @@ textarea {
   letter-spacing: 0;
   line-height: 1em;
   height: 71.1458333333px;
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/case/case-text-decoration.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/case/case-text-decoration.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
   margin: 0 10px;
@@ -3093,7 +3093,7 @@ textarea {
   width: 100%;
   max-width: 1597px;
   height: 90%;
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/recommendation/recommendation-background-image.png");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/recommendation/recommendation-background-image.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 57% 50%;
@@ -3124,7 +3124,7 @@ textarea {
   }
 }
 .recommendation__title-decoration {
-  background: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/index-page/recommendation/title-decoration.svg");
+  background: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/index-page/recommendation/title-decoration.svg");
   background-repeat: no-repeat;
   width: 42.6875px;
   height: 56.9166666667px;
@@ -3273,7 +3273,7 @@ textarea {
 }
 
 .recommendation__user-icon {
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/icons/user-icon.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/icons/user-icon.svg");
 }
 
 .recommendation__paragraph {
@@ -3301,11 +3301,11 @@ textarea {
 }
 
 .recommendation__like-icon {
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/icons/like-icon.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/icons/like-icon.svg");
 }
 
 .recommendation__comment-icon {
-  background-image: url("https://ellyx81.github.io/Yeeell/wp-content/themes/mytheme/img/icons/comment-icon.svg");
+  background-image: url("https://ellyx81.github.io/Yeeell/WP/wp-content/themes/mytheme/img/icons/comment-icon.svg");
 }
 
 .steps {
